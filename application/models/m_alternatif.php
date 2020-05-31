@@ -13,22 +13,25 @@ class m_alternatif extends CI_Model
     {
         return [
             ['field' => 'kode_alternatif',
-            'label' => 'Kode_alternatif',
+            'label' => 'Kode Alternatif',
             'rules' => 'required'],
 
             ['field' => 'nama_alternatif',
-            'label' => 'Nama_alternatif',
+            'label' => 'Nama Alternatif',
             'rules' => 'required'],
 
             ['field' => 'kec_alternatif',
-            'label' => 'Kec_alternatif',
+            'label' => 'Kecamatan Alternatif',
             'rules' => 'required'],
         ];
     }
 
     public function getAll()
     {
-        return $this->db->get($this->_table)->result();
+        $query=$this->db->query("SELECT * FROM tbl_alternatif ORDER BY CAST(SUBSTRING(kode_alternatif, LOCATE('A',kode_alternatif)+1) AS SIGNED) ASC");
+        return $query->result();
+
+        // return $this->db->get($this->_table)->result();
     }
     
     public function getById($id)
@@ -59,6 +62,11 @@ class m_alternatif extends CI_Model
     public function delete($id)
     {
         return $this->db->delete($this->_table, array("id_alternatif" => $id));
+    }
+
+    public function reset()
+    {
+        return $this->db->empty_table($this->_table);
     }
 
     // function hitung_alternatif(){

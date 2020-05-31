@@ -61,6 +61,23 @@
 						</h4>
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
+					<div class="col-5 align-self-center">
+						<div class="customize-input float-right">
+							<?php 
+								if ($this->session->userdata('role') == 'operator')
+								{ 
+								?>
+									<a class="btn btn-danger" style="margin-right: 2px" onclick="resetConfirm('<?php echo site_url('operator/alternatif/reset') ?>')" href="#!" >
+										<i data-feather="x-circle" class="feather-icon" style="margin-bottom: 2px"></i>	Reset Data
+									</a>
+								<?php
+								}
+							?>
+							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Informasi
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- ============================================================== -->
@@ -81,6 +98,14 @@
 				<!-- basic table -->
 				<div class="row">
 					<div class="col-12">
+						<div class="collapse" id="collapseExample">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Informasi</a>
+							</div>
+							<div class="card card-body">
+								Data Alternatif ditampilan pada tabel berikut.
+							</div>
+						</div>
 						<div class="card">
 							<?php 
 								if ($this->session->userdata('role') == 'operator')
@@ -101,7 +126,7 @@
 											<button type="button" class="btn waves-effect waves-light btn-primary float-left">Tambah Data</button>
 										</div> -->
 										<div class="table-responsive">
-											<table id="zero_config" class="table table-striped table-bordered no-wrap">
+											<table id="example" class="table table-striped table-bordered no-wrap">
 												<thead class="bg-success text-white">
 								<?php
 								}
@@ -110,7 +135,7 @@
 								?>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table id="zero_config" class="table table-striped table-bordered no-wrap">
+											<table id="example" class="table table-striped table-bordered no-wrap">
 												<thead class="bg-info text-white">
 								<?php
 								}  
@@ -123,7 +148,7 @@
 													if ($this->session->userdata('role') == 'operator')
 													{ 
 													?>
-														<th>Aksi</th>
+														<th class="text-center">Aksi</th>
 													<?php
 													}
 												?>
@@ -214,9 +239,20 @@
 			$('#btn-delete').attr('href', url);
 			$('#deleteModal').modal();
 		}
-
 	</script>
-
+	<script>
+		function resetConfirm(url) {
+			$('#btn-reset').attr('href', url);
+			$('#multiple-one').modal();
+		}
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#example').DataTable( {
+					"ordering": false
+			} );
+		} );
+	</script>
 </body>
 
 </html>

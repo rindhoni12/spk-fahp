@@ -51,6 +51,19 @@ class m_pengguna extends CI_Model
         ];
     }
 
+    public function rulesupdateprofil()
+    {
+        return [
+            ['field' => 'nama_user',
+            'label' => 'Nama User',
+            'rules' => 'required'],
+
+            ['field' => 'username',
+            'label' => 'Username',
+            'rules' => 'required']
+        ];
+    }
+
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
@@ -65,7 +78,7 @@ class m_pengguna extends CI_Model
     {
         $NOW = date("Y-m-d");
         $post = $this->input->post();
-        // $this->id_user = $post["id"];
+        $this->id_user = uniqid();
         $this->nama_user = $post["nama_user"];
         $this->username = $post["username"];
         $this->password = MD5($post["password"]);
@@ -135,6 +148,33 @@ class m_pengguna extends CI_Model
             $filename = explode(".", $user->foto)[0];
             return array_map('unlink', glob(FCPATH."upload/pengguna/$filename.*"));
         }
+    }
+
+    public function update_profil()
+    {
+        $post = $this->input->post();
+        $this->id_user = $post["id"];
+        $this->nama_user = $post["nama_user"];
+        $this->username = $post["username"];
+
+        if (!empty($_POST['password'])) {
+            $this->password = MD5($post["password"]);
+        } else {
+            $this->password = $post["password_lama"];
+        }
+
+        $this->role = $post["role"];
+
+        if (!empty($_FILES["foto"]["name"])) {
+            $this->foto = $this->_uploadFoto();
+        } else {
+            $this->foto = $post["foto_lama"];
+        }
+
+        $this->tanggal_dibuat = $post["tanggal_dibuat"];
+        $this->login_terakhir = $post["login_terakhir"];
+
+        $this->db->update($this->_table, $this, array('id_user' => $post['id']));
     }
 
     // public function _updateTerakhirLogin($id_user){

@@ -51,7 +51,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard Administrator</a>
+                                    <li class="breadcrumb-item"><a href="index.html">Beranda Administrator</a>
                                     </li>
                                 </ol>
                             </nav>
@@ -92,7 +92,7 @@
                                     <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Data Kriteria</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
+                                    <span class="opacity-7 text-muted"><i data-feather="list"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                     </h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
+                                    <span class="opacity-7 text-muted"><i data-feather="list"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                                     <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Data Administrator</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span>
+                                    <span class="opacity-7 text-muted"><i data-feather="user"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                                     <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Data Operator</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+                                    <span class="opacity-7 text-muted"><i data-feather="user"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                                         <h4 class="card-title">Daftar Lokasi Embung</h4>
                                         <h6 class="card-subtitle mb-3">Ditampilkan menggunakan tabel, daerah yang digunakan dan lokasi kecamatannya.</h6>
                                         <div class="table-responsive">
-                                            <table class="table table-striped">
+                                            <table id="example" class="table table-striped">
                                                 <thead class="bg-info text-white text-center">
                                                     <tr>
                                                         <th>No</th>
@@ -619,6 +619,16 @@
     <!-- ============================================================== -->
     <!-- ini isi v_js.php -->
     <?php $this->load->view("admin/_partials/v_js.php") ?>
+    <script>
+		$(document).ready(function() {
+			$('#example').DataTable( {
+					"ordering": false,
+					"paging":   false,
+					"searching": false,
+					"info":     false
+			} );
+		} );
+	</script>
 
 </body>
 

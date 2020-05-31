@@ -16,8 +16,25 @@
 			<div class="page-breadcrumb">
 				<div class="row">
 					<div class="col-7 align-self-center">
-						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Ubah Data Alternatif
+						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Ubah Data Nilai
 						</h4>
+						<?php
+							$i=0;
+							foreach($data_param as $row)
+							{ 
+								$arr_par[$i] = (explode (',', $row->nilai_param));
+								$par_kri[$i] = (explode (',', $row->param_kriteria));
+								$i++;
+							}
+						?>
+						<?php
+							$j=0;
+							foreach($data_nilai as $row)
+							{ 
+								$arr_nilai[$j] = (explode (',', $row->nilai));
+								$j++;
+							}
+						?>
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
 				</div>
@@ -33,36 +50,54 @@
 
 							<div class="card-body">
 								<form action="<?php base_url('operator/nilai/ubah') ?>" method="post" enctype="multipart/form-data">
-								<input type="hidden" name="id" value="<?php echo $alternatif->id_alternatif?>" />
+								<input type="hidden" name="id" value="<?php echo $nilai->id_nilai?>" />
 								<div class="form-body">
 									<div class="row">
 										<div class="col-md-4">
 											<div class="form-group">
 												<label for="kode_alternatif">Kode Alternatif </label>
-												<input class="form-control <?php echo form_error('kode_alternatif') ? 'is-invalid':'' ?>" type="text"  name="kode_alternatif" placeholder="Masukkan kode alternatif" value="<?php echo $alternatif->kode_alternatif ?>"/>
-												<div class="invalid-feedback">
-													<?php echo form_error('kode_alternatif') ?>
-												</div>
+												<select class="form-control" name="kode_alternatif">
+													<?php 
+													foreach($data_alternatif as $row)
+													{ 
+														$selectedgak = $nilai->kode_alternatif == $row->kode_alternatif ? 'selected' : '';
+														echo '<option value="'.$row->kode_alternatif.'"'.$selectedgak.'>'.$row->kode_alternatif.' - '.$row->nama_alternatif.'</option>';
+													}
+													?>
+												</select>
 											</div>
 										</div>
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="nama_alternatif">Nama Alternatif </label>
-												<input class="form-control <?php echo form_error('nama_alternatif') ? 'is-invalid':'' ?>" type="text"  name="nama_alternatif" placeholder="Masukkan nama alternatif" value="<?php echo $alternatif->nama_alternatif ?>"/>
-												<div class="invalid-feedback">
-													<?php echo form_error('nama_alternatif') ?>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="kec_alternatif">Kecamatan Alternatif </label>
-												<input class="form-control <?php echo form_error('kec_alternatif') ? 'is-invalid':'' ?>" type="text"  name="kec_alternatif" placeholder="Masukkan kecamatan alternatif" value="<?php echo $alternatif->kec_alternatif ?>"/>
-												<div class="invalid-feedback">
-													<?php echo form_error('kec_alternatif') ?>
-												</div>
-											</div>
-										</div>
+									</div>
+									<div class="row">
+										<?php
+										$x=0;
+										$kz = ((substr($nilai->kode_alternatif, 1, 3)) - 1);
+
+										foreach($data_kode as $row)
+										{
+											echo '<div class="col-md-4">
+																<div class="form-group">
+																	<label for="nilai">Nilai Parameter '.$row->kode_kriteria.' </label>
+																	<select class="form-control" name="nilai[]">';
+														
+														// while($x < COUNT($data_param))
+														// {
+															$y = 0;
+															while($y < COUNT($arr_par[$x]))
+															{
+																$selectedgak2 = $arr_nilai[$kz][$x] == $arr_par[$x][$y] ? 'selected' : '';
+																echo '<option value="'.$arr_par[$x][$y].'"'.$selectedgak2.'>'.$par_kri[$x][$y].'</option>';
+																$y++;
+															}
+															
+														// }
+											echo 					'</select>
+																		</div>
+																	</div>';
+											$x++;
+										}
+										?>
+										
 									</div>
 								</div>
 								<div class="form-actions mt-4">

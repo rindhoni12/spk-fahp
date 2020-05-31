@@ -62,6 +62,13 @@
 
 			<div class="container-fluid">
 				<!-- Multiple Input With Default Label -->
+				<div class="alert alert-info alert-dismissible fade show border-0" role="alert">
+				<i class="fa fa-exclamation-circle"></i>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+					</button>
+					<strong>Panduan - </strong> Dimohon dalam mengisikan Kode Alternatif dilakukan secara urut, tetapi jika tidak memungkinkan silahkan lakukan perubahan data atau hapus data terlebih dahulu dan isi data kembali.
+				</div>
 				<div class="row">
 					<div class="col-12">
 						<div class="card">

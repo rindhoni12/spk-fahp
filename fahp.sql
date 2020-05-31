@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2020 at 04:25 PM
+-- Generation Time: May 31, 2020 at 04:03 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -40,14 +40,8 @@ CREATE TABLE `tbl_alternatif` (
 --
 
 INSERT INTO `tbl_alternatif` (`id_alternatif`, `kode_alternatif`, `nama_alternatif`, `kec_alternatif`) VALUES
-('5e950ce3c1aae', 'A1', 'Dadapayam', 'Bancak'),
-('5e950ced867e7', 'A2', 'Mluweh', 'Ungaran Timur'),
-('5e950cf73c2e5', 'A3', 'Lebak', 'Bringin'),
-('5e950d0143cf3', 'A4', 'Pakis', 'Pabelan'),
-('5e950d0de5ba5', 'A5', 'Jatikurung', 'Pringapus'),
-('5e950d1a2cce4', 'A6', 'Gogodalem', 'Bringin'),
-('5e950d2308658', 'A7', 'Kandangan', 'Pringapus'),
-('5e950d2e022f4', 'A8', 'Ngrawan', 'Getasan');
+('5ed212e92610a', 'A1', 'Dadapayam', 'Suruh'),
+('5ed212f2d1ce3', 'A2', 'Gogodalem', 'Bringin');
 
 -- --------------------------------------------------------
 
@@ -71,13 +65,8 @@ CREATE TABLE `tbl_kriteria` (
 --
 
 INSERT INTO `tbl_kriteria` (`id_kriteria`, `kode_kriteria`, `nama_kriteria`, `nilai_l`, `nilai_m`, `nilai_u`, `nilai_param`, `param_kriteria`) VALUES
-('5e97f1ddeb0ab', 'K1', 'Vegetasi area genangan embung', 0.1, 0.2, 0.3, '5,4,3,2,1', 'Hutan,Semak belukar,Ladang/tegalan,Sawah tadah hujan,Perkampungan'),
-('5e97f32ecbee2', 'K2', 'Volume material timbunan', 0.1, 0.2, 0.3, '5,4,3,2,1', '< 40000 m3,40000 m3 <= X < 80000 m3,80000 m3 <= X < 120000 m3,120000 m3 <= X < 160000 m3,160000 m3 <= X < 200000 m3'),
-('5e97f3b44a4dc', 'K3', 'Luas daerah yang akan dibebaskan', 0.1, 0.2, 0.3, '5,4,3,2,1', '1.5 Ha <= X < 3 Ha,3 Ha <= X < 4.5 Ha,4.5 Ha <= X < 6 Ha,6 Ha <= X < 7.5 Ha,>= 7.5 Ha'),
-('5e97f466566fa', 'K4', 'Volume tampungan efektif', 0.1, 0.2, 0.3, '5,4,3,2,1', '>= 1500000 m3,750000 m3 <= X < 1500000 m3,500000 m3 <= X < 750000 m3,250000 m3 <= X < 500000 m3,< 250000 m3'),
-('5e97f50eaa8b9', 'K5', 'Lama operasi', 0.1, 0.2, 0.3, '5,4,3,2,1', '>=100 hari,80 hari <= X < 100 hari,60 hari <= X < 80 hari,40 hari <= X < 60 hari,< 40 hari'),
-('5e97f5e092bc8', 'K6', 'Harga air per m3', 0.1, 0.2, 0.3, '5,4,3,2,1', '< Rp10.000,Rp10.000 <= X < Rp20.000,Rp20.000 <= X < Rp30.000,Rp30.000 <= X < Rp40.000,>= Rp40.000'),
-('5e97f649c0c20', 'K7', 'Akses jalan menuju site bendungan', 0.1, 0.2, 0.3, '4,3,2,1', 'Tersedia jalan aspal sampai site,Jalan makadam/tanah sampai site,Jalan setapak,Tidak tersedia jalan');
+('5ed21292ca073', 'K1', 'Luas daerah yang akan dibebaskan', 0.123, 0.242, 0.176, '3,2,1', '< 40000 m3,< 20000 m3,< 10000 m3'),
+('5ed212de4717d', 'K2', 'Luas daerah yang akan dibebaskan', 0.109, 0.242, 0.176, '3,2,1', '> 3 Ha,1.5 Ha <= X < 3 Ha,< 1.5 Ha');
 
 -- --------------------------------------------------------
 
@@ -96,14 +85,7 @@ CREATE TABLE `tbl_nilai` (
 --
 
 INSERT INTO `tbl_nilai` (`id_nilai`, `kode_alternatif`, `nilai`) VALUES
-('5ea104118567f', 'A1', '2,5,4,3,2,2,2'),
-('5ea11ddbd47bf', 'A2', '5,5,5,5,5,5,3'),
-('5ea11e87c79c1', 'A3', '2,3,5,4,2,5,2'),
-('5ea11eeae5649', 'A4', '2,5,4,4,2,4,2'),
-('5ea11f9fe29ab', 'A5', '5,5,3,1,1,1,2'),
-('5ea1202797b52', 'A6', '5,4,2,2,3,1,2'),
-('5ea12077be0b4', 'A7', '3,4,5,2,1,1,2'),
-('5ea120b21cc73', 'A8', '3,5,4,1,1,1,3');
+('5ed21315a33d6', 'A2', '3,1');
 
 -- --------------------------------------------------------
 
@@ -112,7 +94,7 @@ INSERT INTO `tbl_nilai` (`id_nilai`, `kode_alternatif`, `nilai`) VALUES
 --
 
 CREATE TABLE `tbl_user` (
-  `id_user` int(11) NOT NULL,
+  `id_user` varchar(64) NOT NULL,
   `nama_user` varchar(55) NOT NULL,
   `username` varchar(55) NOT NULL,
   `password` varchar(55) NOT NULL,
@@ -127,8 +109,10 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id_user`, `nama_user`, `username`, `password`, `role`, `foto`, `tanggal_dibuat`, `login_terakhir`) VALUES
-(31, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'administrator', 'default.jpg', '0000-00-00', '2020-04-27'),
-(32, 'op1', 'op1', '4736b2b496ba3de748c6eea6c6b9ca65', 'operator', 'default.jpg', '2020-04-13', '2020-04-27');
+('5ec62d0539ced', 'Ahmad Rindhoni', 'arind', '9cf3ce9a2d2fe6d86901459c98a9bba9', 'administrator', '5ec62d0539ced.jpg', '2020-05-21', '2020-05-31'),
+('5ec63572bbcd0', 'Operator Pusat', 'oppusat', '347f5597ae33d3879b53f5c81eb421c4', 'operator', '5ec63572bbcd0.png', '2020-05-21', '2020-05-31'),
+('5ed3b49fc60a5', 'Admin Utama', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'administrator', '5ed3b49fc60a5.jpg', '2020-05-31', NULL),
+('5ed3b4c5d4e0c', 'Operator utama', 'operator', '4b583376b2767b923c3e1da60d10de59', 'operator', '5ed3b4c5d4e0c.png', '2020-05-31', NULL);
 
 --
 -- Indexes for dumped tables
@@ -157,16 +141,6 @@ ALTER TABLE `tbl_nilai`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id_user`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

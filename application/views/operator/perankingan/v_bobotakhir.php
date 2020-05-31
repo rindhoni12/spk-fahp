@@ -20,15 +20,33 @@
 						</h4>
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
+					<div class="col-5 align-self-center">
+						<div class="customize-input float-right">
+							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Informasi
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-12">
+						<div class="collapse" id="collapseExample">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Informasi</a>
+							</div>
+							<div class="card card-body">
+								Hasil perkalian nilai bobot tiap kriteria dengan bobot kriteria ditampilkan pada tabel berikut.
+							</div>
+						</div>
 						<div class="card">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-chart-line"></i>&nbsp Data Bobot Akhir </a>
+							</div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-striped table-bordered no-wrap">
+									<table id="example" class="table table-striped table-bordered no-wrap">
 										<thead class="bg-info text-white text-center">
 											<?php
                         $i=0;
@@ -48,8 +66,17 @@
                             $j++;
                         }
                       ?>
+											<?php
+                        $k=0;
+                        foreach($tbl_alternatif as $row)
+                        { 
+                          $nama_alt[$k] = $row->nama_alternatif;
+                          $k++;
+                        }
+                      ?>
                       <tr>
 												<th>Kode Alternatif</th>
+												<th>Nama Alternatif</th>
                         <th>Bobot Akhir</th>
 											</tr>
 										</thead>
@@ -59,7 +86,8 @@
                         // $nb = array(); diperlukan jika dilakukan return
                         while($x<COUNT($arr_nilai))
                         {
-                          $kod_alt[$x] = 'A'.($x+1).'';
+													// $kod_alt[$x] = 'A'.($x+1).'';
+													$kode[$x];
                             $y=0;
                             $nb[$x] = 0;
                             while($y<COUNT($arr_nilai[0]))
@@ -69,7 +97,9 @@
                             }
                             
                           echo '<tr>';
-                          echo '<td>'.$kod_alt[$x].'</td>';
+													// echo '<td>'.$kod_alt[$x].'</td>';
+													echo '<td>'.$kode[$x].'</td>';
+													echo '<td>'.$nama_alt[$x].'</td>';
                           echo '<td>'.$nb[$x].'</td>';
                           echo '</tr>';
                           $x++;
@@ -88,6 +118,16 @@
 	</div>
 	<?php $this->load->view("admin/_partials/v_modal.php") ?>
 	<?php $this->load->view("admin/_partials/v_js.php") ?>
+	<script>
+		$(document).ready(function() {
+			$('#example').DataTable( {
+					"ordering": false,
+					"paging":   false,
+					"searching": false,
+					"info":     false
+			} );
+		} );
+	</script>
 </body>
 
 </html>

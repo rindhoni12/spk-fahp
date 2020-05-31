@@ -22,30 +22,32 @@
 						<!-- ini v_breadcrumb -->
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
+					<div class="col-5 align-self-center">
+						<div class="customize-input float-right">
+							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Informasi
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="container-fluid">
-				<?php if ($this->session->flashdata('success')): ?>
-					<div class="alert alert-success alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<?php echo $this->session->flashdata('success'); ?>
-					</div>
-				<?php endif; ?>
 				<div class="row">
-					<div class="col-12">
+					<div class="col">
 						<div class="card">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-database"></i>&nbsp Tahap Pertama </a>
+							</div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-striped table-bordered">
+									<table id="example" class="table table-striped table-bordered">
 										<thead class="bg-info text-white text-center">
 											<tr>
 												<th>Kode Kriteria</th>
 												<th>Kode Si</th>
 												<th>Lower (l)</th>
-												<th>Middel (m)</th>
+												<th>Middle (m)</th>
 												<th>Upper (u)</th>
 											</tr>
 										</thead>
@@ -58,7 +60,9 @@
 												<td>
 													<?php echo $kriteria->kode_kriteria ?>
 												</td>
-												<td><?php echo $si.$kriteria->kode_kriteria[1] ?></td>
+												<td>
+													<?php echo $si.substr($kriteria->kode_kriteria, 1, 3) ?>
+												</td>
 												<td>
 													<?php echo $kriteria->nilai_l ?>
 												</td>
@@ -76,6 +80,100 @@
 							</div>
 						</div>
 					</div>
+					<!-- start of accordions -->
+					<div class="col-lg-6 collapse" id="collapseExample">
+						<div class="card-header text-white bg-light">
+							<a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Informasi</a>
+						</div>
+						<div id="accordion" class="custom-accordion mb-4">
+							<div class="card mb-0">
+								<div class="card-header" id="headingOne">
+										<h5 class="m-0">
+											<a class="custom-accordion-title d-block pt-2 pb-2" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+												Tahap Pertama 
+												<span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+											</a>
+										</h5>
+								</div>
+								<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+									<div class="card-body">
+										1. Tahap Pertama adalah menentukan nilai Fuzzy Syntethic Extent (Si).
+										<br> Nilai Fuzzy Syntethic Extent yang disimbolkan Si berupa nilai lower(l), middle(m), dan upper(u) dari setiap Kriteria yang ada. Data pada tabel berikut didapatkan dari Data Kriteria yang sudah dimasukkan sebelumnya.
+									</div>
+								</div>
+							</div> <!-- batas tahap 1 -->
+							<div class="card mb-0">
+								<div class="card-header" id="headingTwo">
+									<h5 class="m-0">
+										<a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+											Tahap Kedua
+											<span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+									<div class="card-body">
+										2. Tahap Kedua adalah menghitung perbandingan tingkat kemungkinan antar Fuzzy Syntethic Extent (Si).
+										<br> Langkahnya adalah memperbandingkan nilai setiap Fuzzy Syntethic Extent V(𝑆2 ≥ 𝑆1), menggunakan rumus berikut :
+										<br>
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.png') ?> ?>" />
+									</div>
+								</div>
+							</div> <!-- batas tahap 2 -->
+							<div class="card mb-0">
+								<div class="card-header" id="headingThree">
+									<h5 class="m-0">
+										<a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											Tahap Ketiga
+											<span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+									<div class="card-body">
+										3. Tahap Ketiga adalah setelah didapat nilai perbandingan dari setiap Fuzzy Syntethic Extent V(𝑆2 ≥ 𝑆1), lalu diambil nilai minimumnya, menggunakan rumus berikut :
+										<br><br>
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_d.png') ?> ?>" />
+									</div>
+								</div>
+							</div> <!-- batas tahap 3 -->
+							<div class="card mb-0">
+								<div class="card-header" id="headingFour">
+									<h5 class="m-0">
+										<a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+											Tahap Keempat
+											<span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+									<div class="card-body">
+										4. Tahap Keempat adalah setelah didapat nilai minimum dari perbandingan setiap Fuzzy Syntethic Extent (d'), nilai tersebut diurutkan dan menjadi nilai bobot (W'). Pengurutan nilainya seperti pada rumus berikut ini :
+										<br><br>
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_aksen.png') ?> ?>" />
+									</div>
+								</div>
+							</div> <!-- batas tahap 4 -->
+							<div class="card mb-0">
+								<div class="card-header" id="headingFive">
+									<h5 class="m-0">
+										<a class="custom-accordion-title collapsed d-block pt-2 pb-2" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+											Tahap Kelima
+											<span class="float-right"><i class="mdi mdi-chevron-down accordion-arrow"></i></span>
+										</a>
+									</h5>
+								</div>
+								<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+									<div class="card-body">
+										5. Tahap Keempat adalah setelah didapat nilai nilai bobot (W'), nilai tersebut dinormalisasi untuk menghasilkan nilai bobot ternormalisasi (W) menggunakan rumus berikut :
+										<br><br>
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_ternormalisasi.png') ?> ?>" />
+									</div>
+								</div>
+							</div> <!-- batas tahap 5 -->
+						</div> <!-- end custom accordions-->
+					</div> 
+					<!-- end of accordions -->
 				</div>
 			</div>
 			<?php $this->load->view("admin/_partials/v_footer.php") ?>
@@ -83,14 +181,16 @@
 	</div>
 	<?php $this->load->view("admin/_partials/v_modal.php") ?>
 	<?php $this->load->view("admin/_partials/v_js.php") ?>
-	
 	<script>
-		function deleteConfirm(url) {
-			$('#btn-delete').attr('href', url);
-			$('#deleteModal').modal();
-		}
+		$(document).ready(function() {
+			$('#example').DataTable( {
+					"ordering": false,
+					"paging":   false,
+					"searching": false,
+					"info":     false
+			} );
+		} );
 	</script>
-
 </body>
 
 </html>

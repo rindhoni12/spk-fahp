@@ -25,6 +25,26 @@
 						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Daftar Data Nilai</h4>
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
+					<div class="col-5 align-self-center">
+						<div class="customize-input float-right">
+							<!-- <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#multiple-one" style="margin-right: 2px">
+								<i data-feather="x-circle" class="feather-icon" style="margin-bottom: 2px"></i>	Reset Data
+							</button> -->
+							<?php 
+								if ($this->session->userdata('role') == 'operator')
+								{ 
+								?>
+									<a class="btn btn-danger" style="margin-right: 2px" onclick="resetConfirm('<?php echo site_url('operator/nilai/reset') ?>')" href="#!" >
+										<i data-feather="x-circle" class="feather-icon" style="margin-bottom: 2px"></i>	Reset Data
+									</a>
+								<?php
+								}
+							?>
+							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Informasi
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="container-fluid">
@@ -38,6 +58,16 @@
 				<?php endif; ?>
 				<div class="row">
 					<div class="col-12">
+						<div class="collapse" id="collapseExample">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Informasi</a>
+							</div>
+							<div class="card card-body">
+								Data Nilai dari masing - masing Alternatif ditampilan pada tabel berikut.
+								<br>
+								<br> Nilai ditampilkan secara urut mulai dari Kriteria pertama sampai yang terakhir.
+							</div>
+						</div>
 						<div class="card">
 							<?php 
 								if ($this->session->userdata('role') == 'operator')
@@ -48,7 +78,7 @@
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table id="zero_config" class="table table-striped table-bordered no-wrap">
+											<table id="example" class="table table-striped table-bordered no-wrap">
 												<thead class="bg-success text-white">
 								<?php
 								}
@@ -57,7 +87,7 @@
 								?>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table id="zero_config" class="table table-striped table-bordered no-wrap">
+											<table id="example" class="table table-striped table-bordered no-wrap">
 												<thead class="bg-info text-white">
 								<?php
 								}  
@@ -85,7 +115,7 @@
 													if ($this->session->userdata('role') == 'operator')
 													{ 
 													?>
-														<th>Aksi</th>
+														<th class="text-center">Aksi</th>
 													<?php
 													}
 												?>
@@ -111,7 +141,7 @@
 													if ($this->session->userdata('role') == 'operator')
 													{ 
 													?>
-														<td>
+														<td width="175px">
 															<a href="<?php echo site_url('operator/nilai/ubah/'.$nilai->id_nilai) ?>"
 																class="btn btn-sm"><i class="fas fa-edit"></i> Ubah</a>
 															<a onclick="deleteConfirm('<?php echo site_url('operator/nilai/delete/'.$nilai->id_nilai) ?>')"
@@ -135,11 +165,26 @@
 	</div>
 	<?php $this->load->view("admin/_partials/v_modal.php") ?>
 	<?php $this->load->view("admin/_partials/v_js.php") ?>
+	
 	<script>
 		function deleteConfirm(url) {
 			$('#btn-delete').attr('href', url);
 			$('#deleteModal').modal();
 		}
 	</script>
+	<script>
+		function resetConfirm(url) {
+			$('#btn-reset').attr('href', url);
+			$('#multiple-one').modal();
+		}
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#example').DataTable( {
+					"ordering": false
+			} );
+		} );
+	</script>
+	
 </body>
 </html>

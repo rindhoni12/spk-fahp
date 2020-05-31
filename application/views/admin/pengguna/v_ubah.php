@@ -43,7 +43,7 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="nama_user">Nama Pengguna </label>
-												<input class="form-control <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" value="<?php echo $pengguna->nama_user ?>">
+												<input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" value="<?php echo $pengguna->nama_user ?>">
 												<div class="invalid-feedback"><?php echo form_error('nama_user') ?></div>
 											</div>
 										</div>
@@ -51,8 +51,8 @@
 											<div class="form-group">
 												<label for="role">Role Pengguna</label>
 												<select class="form-control" name="role">
-													<option value="administrator">Administrator</option>
-													<option value="operator">Operator</option>
+													<option value="administrator" <?= $pengguna->role == 'administrator' ? 'selected' : '' ?>>Administrator</option>
+													<option value="operator" <?= $pengguna->role == 'operator' ? 'selected' : '' ?>>Operator</option>
 												</select>
 											</div>
 										</div>
@@ -67,8 +67,9 @@
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="mt-3" for="password">Password </label>
-												<input class="form-control" type="text"	name="password" placeholder="Masukkan password">
+												<label class="mt-3" for="password">Password (Optional) </label>
+												<input class="form-control" type="password"	name="password" placeholder="Masukkan password">
+												<small class="form-text text-muted">Biarkan kosong jika tidak ingin mengubah password</small>
 												<input class="form-control" type="text" name="password_lama" value="<?php echo $pengguna->password ?>" hidden>
 											</div>
 										</div>
@@ -78,6 +79,7 @@
 											<div class="form-group">
 												<label class="mt-3" for="foto">Foto Pengguna (Optional) </label>
 												<input class="form-control-file" type="file" name="foto" accept=".gif, .jpg, .jpeg, .png">
+												<small class="form-text text-muted">Tidak perlu upload foto jika tidak ingin mengubah foto</small>
 												<input type="hidden" name="foto_lama" value="<?php echo $pengguna->foto ?>">
 											</div>
 										</div>

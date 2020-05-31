@@ -14,6 +14,10 @@ class Alternatif extends CI_Controller
 
     public function index()
     {
+        if($this->m_login->logged_id() != TRUE)
+		{
+            redirect(site_url('login'));
+		}
         $data["tbl_alternatif"] = $this->m_alternatif->getAll();
         // $data['num_results'] = $this->m_alternatif->hitung_alternatif();
         $this->load->view("operator/alternatif/v_daftar", $data);
@@ -68,6 +72,17 @@ class Alternatif extends CI_Controller
         if (!isset($id)) show_404();
         
         if ($this->m_alternatif->delete($id)) {
+            redirect(site_url('operator/alternatif'));
+        }
+    }
+
+    public function reset()
+    {
+        if($this->m_login->is_role() != "operator"){
+			redirect(site_url('login'));
+		}
+        
+        if ($this->m_alternatif->reset()) {
             redirect(site_url('operator/alternatif'));
         }
     }

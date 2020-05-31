@@ -57,10 +57,8 @@ class Login extends CI_Controller {
                 if ($checking != FALSE) 
                 {
                     // $pengguna = $this->m_pengguna->_updateTerakhirLogin('id_user');
-                    $this->_updateTerakhirLogin('tbl_user', array('username' => $username), array('password' => $password));
+                    // $this->_updateTerakhirLogin('tbl_user', array('username' => $username), array('password' => $password));
 
-                    var_dump($id_user);
-                    
                     foreach ($checking as $apps) {
 
                         $session_data = array(
@@ -110,7 +108,8 @@ class Login extends CI_Controller {
 
     public function logout()
 	{
-		$this->session->sess_destroy();
+        $this->_updateTerakhirLogin('tbl_user', array('username' => $this->session->userdata("user_name")), array('password' => $this->session->userdata("user_pass")));
+        $this->session->sess_destroy();
 		redirect(site_url('login'));
     }
 
@@ -132,4 +131,14 @@ class Login extends CI_Controller {
         $this->db->where($field2);
         $this->db->update($table);
     }
+
+    // public function profil()
+    // {
+    //     $this->load->view("admin/pengguna/v_profil");
+    // }
+
+    // public function ubah_profil()
+    // {
+    //     $this->load->view("admin/pengguna/v_ubahprofil");
+    // }
 }

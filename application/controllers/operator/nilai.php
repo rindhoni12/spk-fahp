@@ -16,6 +16,10 @@ class Nilai extends CI_Controller
 
     public function index()
     {
+        if($this->m_login->logged_id() != TRUE)
+		{
+            redirect(site_url('login'));
+		}
         $data["tbl_nilai"] = $this->m_nilai->getAll();
         
         $this->load->view("operator/nilai/v_daftar", $data);
@@ -74,6 +78,11 @@ class Nilai extends CI_Controller
 		}
         if (!isset($id)) redirect('operator/nilai');
         
+        $data['data_alternatif'] = $this->m_nilai->getAlternatif(); //udah buat nampilin dropdown di tambah dan ubah biar urut
+        $data['data_kode'] = $this->m_nilai->getkodeKriteria(); //untuk nampilin Nilai Parameter biar urut
+        $data['data_param'] = $this->m_nilai->getparamKriteria(); //supaya nilai di dropdown dan Nilai Parameter yg dikodekan getkodekriteria biar sama gitu lho
+        $data['data_nilai'] = $this->m_nilai->getNilai(); //udah buat nilai yg diambil sesuai dg kode alternatif yg dipilih, masa kode diatur nilai gak
+        
         $nilai = $this->m_nilai;
         $validation = $this->form_validation;
         $validation->set_rules($nilai->rules());
@@ -102,4 +111,14 @@ class Nilai extends CI_Controller
         }
     }
 
+    public function reset()
+    {
+        if($this->m_login->is_role() != "operator"){
+			redirect(site_url('login'));
+		}
+        
+        if ($this->m_nilai->reset()) {
+            redirect(site_url('operator/nilai'));
+        }
+    }
 }

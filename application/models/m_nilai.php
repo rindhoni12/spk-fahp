@@ -32,8 +32,13 @@ class m_nilai extends CI_Model
         }*/
 
         // $query = $this->db->query('SELECT kode_alternatif, nama_alternatif FROM tbl_alternatif');
-        $query = $this->db->query('SELECT * FROM tbl_alternatif');
+        
+        // $query = $this->db->query('SELECT * FROM tbl_alternatif');
+        // return $query->result();
+        // pake ini kalo error
 
+
+        $query=$this->db->query("SELECT * FROM tbl_alternatif ORDER BY CAST(SUBSTRING(kode_alternatif, LOCATE('A',kode_alternatif)+1) AS SIGNED) ASC");
         return $query->result();
 
         //echo 'Total Results: ' . $query->num_rows();
@@ -41,15 +46,26 @@ class m_nilai extends CI_Model
 
     function getkodeKriteria()
     {
-        $query = $this->db->query('SELECT kode_kriteria FROM tbl_kriteria');
         // $query = $this->db->query('SELECT * FROM tbl_kriteria');
+        
+        // $query = $this->db->query('SELECT kode_kriteria FROM tbl_kriteria');
+        // return $query->result(); 
+        // pake ini kalo eror
+
+        $query=$this->db->query("SELECT kode_kriteria FROM tbl_kriteria ORDER BY CAST(SUBSTRING(kode_kriteria, LOCATE('K',kode_kriteria)+1) AS SIGNED) ASC");
         return $query->result();
     }
 
     function getparamKriteria()
     {
         // $query = $this->db->query('SELECT * FROM tbl_kriteria');
-        $query = $this->db->query('SELECT nilai_param, param_kriteria FROM tbl_kriteria');
+        
+        // $query = $this->db->query('SELECT nilai_param, param_kriteria FROM tbl_kriteria');
+        // return $query->result();
+        // pake ini kalo error
+
+
+        $query=$this->db->query("SELECT nilai_param, param_kriteria FROM tbl_kriteria ORDER BY CAST(SUBSTRING(kode_kriteria, LOCATE('K',kode_kriteria)+1) AS SIGNED) ASC");
         return $query->result();
         
         
@@ -62,9 +78,20 @@ class m_nilai extends CI_Model
         // return $query->result();
     }
 
+    function getNilai()
+    {
+        // $query = $this->db->query('SELECT nilai FROM tbl_nilai');
+        // return $query->result();
+
+        $query=$this->db->query("SELECT nilai FROM tbl_nilai ORDER BY CAST(SUBSTRING(kode_alternatif, LOCATE('A',kode_alternatif)+1) AS SIGNED) ASC");
+        return $query->result();
+    }
+
     public function getAll()
     {
-        return $this->db->get($this->_table)->result();
+        $query=$this->db->query("SELECT * FROM tbl_nilai ORDER BY CAST(SUBSTRING(kode_alternatif, LOCATE('A',kode_alternatif)+1) AS SIGNED) ASC");
+        return $query->result();
+        // return $this->db->get($this->_table)->result();
     }
     
     public function getById($id)
@@ -85,15 +112,22 @@ class m_nilai extends CI_Model
 
     public function update()
     {
+        $arr_nilai = implode(",", $this->input->post('nilai[]'));
+
         $post = $this->input->post();
-        $this->id_alternatif = $post["id"];
+        $this->id_nilai = $post["id"];
         $this->kode_alternatif = $post["kode_alternatif"];
-        $this->nilai = $post["nilai"];
+        $this->nilai = $arr_nilai;
         return $this->db->update($this->_table, $this, array('id_nilai' => $post['id']));
     }
 
     public function delete($id)
     {
         return $this->db->delete($this->_table, array("id_nilai" => $id));
+    }
+
+    public function reset()
+    {
+        return $this->db->empty_table($this->_table);
     }
 }

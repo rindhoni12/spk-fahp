@@ -22,16 +22,42 @@
 						<!-- ini v_breadcrumb -->
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
+					<div class="col-5 align-self-center">
+						<div class="customize-input float-right">
+							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Informasi
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-12">
+						<div class="collapse" id="collapseExample">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Informasi</a>
+							</div>
+							<div class="card card-body">
+								Dalam membuat perankingan terbaik, mula-mula mencari bobot dari setiap Alternatif yang ada.
+								<br>
+								Bobot tersebut didapat dari mengalikan setiap bobot parameter tiap kriteria dengan bobot kriterianya, setelah itu dijumlahkan.
+								<br><br>
+								Untuk lebih jelasnya perhitungan menggunakan rumus berikut ini :
+								<br>
+								<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.png') ?> ?>" width="640"/>
+							</div>
+						</div>
+					</div>
+					<div class="col-8">
 						<div class="card">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-list-ul"></i>&nbsp Data Nilai </a>
+							</div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-striped table-bordered no-wrap">
+									<table id="example" class="table table-striped table-bordered no-wrap">
 										<thead class="bg-info text-white text-center">
 											<?php
 												$i=0;
@@ -79,11 +105,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-4">
 						<div class="card">
+							<div class="card-header text-white bg-light">
+								<a class="text-info"><i class="fas fa-database"></i>&nbsp Data Bobot </a>
+							</div>
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-striped table-bordered no-wrap">
+									<table id="example2" class="table table-striped table-bordered no-wrap">
 										<thead class="bg-info text-white text-center">
 											<tr>
 												<th>Kode Kriteria</th>
@@ -115,12 +144,25 @@
 	</div>
 	<?php $this->load->view("admin/_partials/v_modal.php") ?>
 	<?php $this->load->view("admin/_partials/v_js.php") ?>
-	
 	<script>
-		function deleteConfirm(url) {
-			$('#btn-delete').attr('href', url);
-			$('#deleteModal').modal();
-		}
+		$(document).ready(function() {
+			$('#example').DataTable( {
+					"ordering": false,
+					"paging":   false,
+					"searching": false,
+					"info":     false
+			} );
+		} );
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#example2').DataTable( {
+					"ordering": false,
+					"paging":   false,
+					"searching": false,
+					"info":     false
+			} );
+		} );
 	</script>
 
 </body>

@@ -49,7 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+// $route['default_controller'] = 'welcome';
+$route['default_controller'] = 'landing';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -59,6 +60,12 @@ $route['operator'] = 'operator/beranda';
 $route['admin/kriteria'] = 'operator/kriteria';
 $route['admin/alternatif'] = 'operator/alternatif';
 $route['admin/nilai'] = 'operator/nilai';
+$route['admin/perankingan/hasil_ranking'] = 'operator/perankingan/hasil_ranking';
+
+// $route['profil'] = 'login/profil'; gak jadi pake halaman jadinya modal
+$route['ubah_profil'] = 'admin/pengguna/ubah_profil';
+
+
 
 // $route['kriteria'] = 'operator/kriteria';
 // $route['alternatif'] = 'operator/alternatif';

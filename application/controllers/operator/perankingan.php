@@ -20,6 +20,9 @@ class Perankingan extends CI_Controller
 
     public function nilai_akhir()
     {
+        if($this->m_login->is_role() != "operator"){
+			redirect(site_url('login'));
+		}
         $data["tbl_bobot"] = $this->fahp_perhitungan->hitung_ternormalisasi();
         $data["tbl_nilaiakhir"] = $this->fahp_perhitungan->getAllNilai();
 
@@ -57,8 +60,12 @@ class Perankingan extends CI_Controller
 
     public function bobot_akhir()
     {
+        if($this->m_login->is_role() != "operator"){
+			redirect(site_url('login'));
+		}
         $data["tbl_bobot"] = $this->fahp_perhitungan->hitung_ternormalisasi();
         $data["tbl_nilaiakhir"] = $this->fahp_perhitungan->getAllNilai();
+        $data["tbl_alternatif"] = $this->fahp_perhitungan->getAllAlternatif();
         // $i=0;
         // foreach($data["tbl_nilaiakhir"] as $row)
         // { 
@@ -93,8 +100,23 @@ class Perankingan extends CI_Controller
 
     public function hasil_ranking()
     {
+        if($this->m_login->logged_id() != TRUE)
+		{
+            redirect(site_url('login'));
+		}
         $data["tbl_bobot"] = $this->fahp_perhitungan->hitung_ternormalisasi();
         $data["tbl_nilaiakhir"] = $this->fahp_perhitungan->getAllNilai();
+        $data["tbl_alternatif"] = $this->fahp_perhitungan->getAllAlternatif();
+        
+        // $k=0;
+        // foreach($data["tbl_alternatif"] as $row)
+        // { 
+        //     $nama_alt[$k] = $row->nama_alternatif;
+        //     $k++;
+        // }
+
+        // print_r($nama_alt);
+        
         $this->load->view("operator/perankingan/v_hasilranking", $data);
     }
 

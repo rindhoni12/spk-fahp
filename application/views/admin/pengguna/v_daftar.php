@@ -18,7 +18,7 @@
 				<div class="row">
 					<div class="col-7 align-self-center">
 						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">
-							Daftar Data Pengguna - Operator <?php echo $hasil_operator->jumlah_operator;?> & Administrator <?php echo $hasil_administrator->jumlah_administrator;?>
+							Daftar Data Pengguna
 						</h4>
 						<!-- ini v_breadcrumb -->
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
@@ -68,20 +68,20 @@
 													<?php echo $pengguna->role ?>			
 												</td>
 												<td>
-													<img src="<?php echo base_url('upload/pengguna/'.$pengguna->foto) ?>" width="64" />
+													<img src="<?php echo base_url('upload/pengguna/'.$pengguna->foto) ?>" alt="foto" class="rounded-circle" height="64" width="64" style="object-fit: cover; object-position: center;"/>
 												</td>
 												<td>
-													<?php echo $pengguna->tanggal_dibuat ?>
+													<?php echo longdate_indo($pengguna->tanggal_dibuat) ?>
 												</td>
 												<td>
-													<?php echo $pengguna->login_terakhir ?>
+													<?php echo longdate_indo($pengguna->login_terakhir) ?>
 												</td>
-												<td>
+												<td width="150px">
 													<a href="<?php echo site_url('admin/pengguna/ubah/'.$pengguna->id_user) ?>"
 														class="btn btn-small"><i class="fas fa-edit"></i> Ubah</a>
 													
 													<?php
-														if($hasil_administrator->jumlah_administrator > 1 && $hasil_operator->jumlah_operator >= 0)  
+														if($pengguna->id_user != $this->session->userdata("user_id"))
 														{ 
 													?>
 															<a onclick="deleteConfirm('<?php echo site_url('admin/pengguna/delete/'.$pengguna->id_user) ?>')"	href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>

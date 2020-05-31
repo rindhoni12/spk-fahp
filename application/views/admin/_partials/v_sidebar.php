@@ -12,7 +12,7 @@
             <li class="nav-small-cap"><span class="hide-menu">Data</span></li>
             <li class="sidebar-item" <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>> 
                 <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                    <i data-feather="grid" class="feather-icon"></i>
+                    <i data-feather="list" class="feather-icon"></i>
                     <span class="hide-menu">Data Embung </span>
                 </a>
                 <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -42,8 +42,8 @@
             <li class="list-divider"></li> 
             <li class="nav-small-cap"><span class="hide-menu">Perankingan </span></li>
             <li class="sidebar-item" <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>> 
-                <a class="sidebar-link sidebar-link" href="<?php echo site_url('operator/perankingan/hasil_ranking') ?>" aria-expanded="false">
-                    <i data-feather="user" class="feather-icon"></i>
+                <a class="sidebar-link sidebar-link" href="<?php echo site_url('admin/perankingan/hasil_ranking') ?>" aria-expanded="false">
+                    <i data-feather="trending-up" class="feather-icon"></i>
                     <span class="hide-menu">Hasil Ranking </span>
                 </a>
             </li>
@@ -130,13 +130,13 @@
             <li class="nav-small-cap"><span class="hide-menu">Pengaturan</span></li>
             <li class="sidebar-item" <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>> 
                 <a class="sidebar-link sidebar-link" href="<?php echo site_url('admin/pengguna') ?>" aria-expanded="false">
-                    <i data-feather="user" class="feather-icon"></i>
-                    <span class="hide-menu">Kelola Pengguna </span>
+                    <i data-feather="users" class="feather-icon"></i>
+                    <span class="hide-menu">Pengguna </span>
                 </a>
             </li>
             <li class="sidebar-item"> 
-                <a class="sidebar-link sidebar-link" href="authentication-register1.html" aria-expanded="false">
-                    <i data-feather="lock" class="feather-icon"></i>
+                <a class="sidebar-link sidebar-link" href="<?php echo site_url('admin/peta') ?>" aria-expanded="false">
+                    <i data-feather="map" class="feather-icon"></i>
                     <span class="hide-menu">Peta </span>
                 </a>
             </li>

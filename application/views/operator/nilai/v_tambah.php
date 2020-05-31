@@ -21,7 +21,7 @@
 				<div class="row">
 					<div class="col-7 align-self-center">
 						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Nilai 
-						
+						</h4>
 						<?php
 							$i=0;
 							foreach($data_param as $row)
@@ -32,7 +32,7 @@
 							}
 							
 						?>
-						</h4>
+						
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
 					</div>
 				</div>
@@ -66,8 +66,9 @@
 											</div>
 										</div>
 									</div>
+
 									<div class="row">
-									<?php
+										<?php
 										$x=0;
 										foreach($data_kode as $row)
 										{
@@ -92,8 +93,9 @@
 																	</div>';
 											$x++;
 										}
-									?>
-									</div>									
+										?>
+									</div>	
+
 								</div>
 									<div class="form-actions mt-4">
 										<div class="text-left">

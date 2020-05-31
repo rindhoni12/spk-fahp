@@ -13,7 +13,7 @@
             <li class="nav-small-cap"><span class="hide-menu">Data</span></li>
             <li class="sidebar-item" <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>> 
                 <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                    <i data-feather="grid" class="feather-icon"></i>
+                    <i data-feather="list" class="feather-icon"></i>
                     <span class="hide-menu">Data Embung </span>
                 </a>
                 <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -54,7 +54,7 @@
             <li class="nav-small-cap"><span class="hide-menu">Perhitungan</span></li>
             <li class="sidebar-item" <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>> 
                 <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                    <i data-feather="grid" class="feather-icon"></i>
+                    <i data-feather="database" class="feather-icon"></i>
                     <span class="hide-menu">Pencarian Bobot </span>
                 </a>
                 <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -108,7 +108,7 @@
             <li class="nav-small-cap"><span class="hide-menu">Perankingan</span></li>
             <li class="sidebar-item" <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>> 
                 <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                    <i data-feather="grid" class="feather-icon"></i>
+                    <i data-feather="trending-up" class="feather-icon"></i>
                     <span class="hide-menu">Ranking </span>
                 </a>
                 <ul aria-expanded="false" class="collapse  first-level base-level-line">
