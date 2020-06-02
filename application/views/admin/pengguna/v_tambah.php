@@ -42,7 +42,7 @@
 											<div class="col-md-6">
 												<div class="form-group">
 													<label for="role">Role Pengguna</label>
-													<select class="form-control" name="role">
+													<select class="form-control" name="role" required>
 														<option value="" selected disabled hidden>Pilih role pengguna</option>';
 														<option value="administrator">Administrator</option>
 														<option value="operator">Operator</option>

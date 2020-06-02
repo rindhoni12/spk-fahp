@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png') ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/web-icon.png') ?>">
 <title><?php echo SITE_NAME ." : ". ucfirst($this->uri->segment(1)) ." - ". ucfirst($this->uri->segment(2)) ?></title>
 <link href="<?php echo base_url('assets/extra-libs/c3/c3.min.css') ?>" rel="stylesheet">
 <link href="<?php echo base_url('assets/libs/chartist/dist/chartist.min.css') ?>" rel="stylesheet">

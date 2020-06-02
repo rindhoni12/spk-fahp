@@ -46,7 +46,8 @@
 								<br><br>
 								Untuk lebih jelasnya perhitungan menggunakan rumus berikut ini :
 								<br>
-								<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.png') ?> ?>" width="640"/>
+								<br>
+								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.png') ?> ?>" width="351"/>
 							</div>
 						</div>
 					</div>

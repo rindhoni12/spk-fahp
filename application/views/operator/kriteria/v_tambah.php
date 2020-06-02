@@ -65,7 +65,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_l">Nilai Lower (l) </label>
 													<input class="form-control <?php echo form_error('nilai_l') ? 'is-invalid':'' ?>"
-														type="text" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower">
+														type="number" step="any" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_l') ?>
 													</div>
@@ -75,7 +75,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_m">Nilai Middle (m) </label>
 													<input class="form-control <?php echo form_error('nilai_m') ? 'is-invalid':'' ?>"
-														type="text" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle">
+														type="number" step="any" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_m') ?>
 													</div>
@@ -85,7 +85,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_u">Nilai Upper (u) </label>
 													<input class="form-control <?php echo form_error('nilai_u') ? 'is-invalid':'' ?>"
-														type="text" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper">
+														type="number" step="any" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_u') ?>
 													</div>
@@ -106,7 +106,7 @@
 												<div class="form-group" id='groupnilai'>
 													<div id="divnilai1">
 														<label class="mt-4" for="nilai_param">Nilai Parameter 1 : </label>
-														<input type='text' class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id='input1'/>
+														<input type='number' step="any" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id='input1'/>
 														<div class="invalid-feedback">
 														<?php echo form_error('nilai_param') ?>
 														</div>
@@ -157,7 +157,7 @@
           .attr("id", 'divnilai' + i);
         div.before()
 					.html(
-						'<label class="mt-4" for="nilai_param">Nilai Parameter ' + i + ' : </label>' + '<input type="text" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id="input' + i + '" />' + '<div class="invalid-feedback">' + '<?php echo form_error('nilai_param') ?>' + '</div>'
+						'<label class="mt-4" for="nilai_param">Nilai Parameter ' + i + ' : </label>' + '<input type="number" step="any" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id="input' + i + '" />' + '<div class="invalid-feedback">' + '<?php echo form_error('nilai_param') ?>' + '</div>'
 					);
 				div.prependTo("#groupnilai");
 

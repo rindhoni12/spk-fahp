@@ -30,7 +30,7 @@
 
 
 	<!-- Favicon  -->
-	<link rel="icon" href="<?php echo base_url('assets_landing/images/favicon.png') ?>">
+	<link rel="icon" href="<?php echo base_url('assets/images/web-icon.png') ?>">
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -52,8 +52,9 @@
 		<!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
 
 		<!-- Image Logo -->
-		<a class="navbar-brand logo-image" href="<?php echo base_url(''); ?>"><img
-				src="<?php echo base_url('assets_landing/images/logo.svg') ?>" alt="alternative"></a>
+		<a class="navbar-brand logo-image" href="<?php echo base_url(''); ?>">
+      <img src="<?php echo base_url('assets/images/landing_logo.png') ?>" height="30" alt="wrapkit">
+		</a>
 
 		<!-- Mobile Menu Toggle Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"

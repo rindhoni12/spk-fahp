@@ -59,7 +59,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_l">Nilai Lower (l) </label>
 													<input class="form-control <?php echo form_error('nilai_l') ? 'is-invalid':'' ?>"
-														type="text" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower" value="<?php echo $kriteria->nilai_l ?>">
+														type="number" step="any" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower" value="<?php echo $kriteria->nilai_l ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_l') ?>
 													</div>
@@ -69,7 +69,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_m">Nilai Middle (m) </label>
 													<input class="form-control <?php echo form_error('nilai_m') ? 'is-invalid':'' ?>"
-														type="text" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle" value="<?php echo $kriteria->nilai_m ?>">
+														type="number" step="any" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle" value="<?php echo $kriteria->nilai_m ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_m') ?>
 													</div>
@@ -79,7 +79,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_u">Nilai Upper (u) </label>
 													<input class="form-control <?php echo form_error('nilai_u') ? 'is-invalid':'' ?>"
-														type="text" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper" value="<?php echo $kriteria->nilai_u ?>">
+														type="number" step="any" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper" value="<?php echo $kriteria->nilai_u ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_u') ?>
 													</div>
@@ -119,7 +119,7 @@
 																		<div class="form-group" id="groupnilai">
 																			<div id="divnilai'.($mm).'">
 																				<label class="mt-4" for="nilai_param">Nilai Parameter '.($mm).' : </label>
-																				<input type="text" class="form-control " name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id="input'.($mm).'" value="'.$arr_par[$kz][$y].'"/>
+																				<input type="number" step="any" class="form-control " name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id="input'.($mm).'" value="'.$arr_par[$kz][$y].'"/>
 																			</div>
 																		</div>
 																	</div>

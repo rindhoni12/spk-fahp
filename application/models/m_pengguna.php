@@ -22,7 +22,7 @@ class m_pengguna extends CI_Model
 
             ['field' => 'username',
             'label' => 'Username',
-            'rules' => 'required'],
+            'rules' => 'required|min_length[5]|max_length[12]|is_unique[tbl_user.username]'],
 
             ['field' => 'password',
             'label' => 'Password',
@@ -31,6 +31,7 @@ class m_pengguna extends CI_Model
             ['field' => 'role',
             'label' => 'Role',
             'rules' => 'required']
+            
         ];
     }
 

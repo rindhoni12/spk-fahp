@@ -61,7 +61,7 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="mt-3" for="username">Username </label>
-												<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" value="<?php echo $pengguna->username ?>">
+												<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" value="<?php echo $pengguna->username ?>" readonly>
 												<div class="invalid-feedback"><?php echo form_error('username') ?></div>
 											</div>
 										</div>

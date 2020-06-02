@@ -6,7 +6,7 @@
         <div class="navbar-brand">
             <a href="<?php echo site_url('admin') ?>">
                 <b class="logo-icon">
-                    <img src="<?php echo base_url('assets/images/logo-icon.png') ?>" alt="homepage" class="dark-logo" />
+                    <img src="<?php echo base_url('assets/images/web-icon.png') ?>" alt="homepage" class="dark-logo" />
                     <img src="<?php echo base_url('assets/images/logo-icon.png') ?>" alt="homepage" class="light-logo" />
                 </b>
                 <span class="logo-text">

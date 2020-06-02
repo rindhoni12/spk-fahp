@@ -164,7 +164,7 @@
                                         <h6 class="card-subtitle mb-3">Ditampilkan menggunakan Carto, daerah yang berwarna adalah yang digunakan.</h6>
                                         <div class="box">
                                             <!-- <iframe width="100%" height="520" frameborder="0" src="https://arindhoni.carto.com/builder/886aaf47-49b8-40a4-9808-37a69036eb3f/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
-                                            <iframe src="https://muhammadrefi11.carto.com/builder/b60a2b59-5da0-4c37-a959-98ca3f86e163/embed" frameborder="0" style="height:525px; width:100%;">
+                                            <iframe src="https://muhammadrefi11.carto.com/builder/34d16669-7763-4a4d-b67d-fffa07af4ac7/embed" frameborder="0" style="height:525px; width:100%;">
                                             </iframe>
                                         </div>
                                     </div>

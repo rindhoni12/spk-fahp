@@ -17,11 +17,12 @@
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
                         <div class="text-center">
-                            <img src="<?php echo base_url('assets/images/big/icon.png') ?>" alt="wrapkit">
+                            <img src="<?php echo base_url('assets/images/web-icon.png') ?>" alt="wrapkit">
+                            <img src="<?php echo base_url('assets/images/spk-fahp-logo.png') ?>" alt="wrapkit">
                         </div>
-
-                        <h2 class="mt-3 text-center">Silahkan Login</h2>
-                        <p class="text-center">Masukkan username dan password untuk mengakses panel admin atau panel operator.</p>
+                        
+                        <h3 class="mt-3 text-center"><strong>Silahkan Login</strong></h3>
+                        <label class="text-center">Masukkan username dan password untuk mengakses panel admin atau panel operator.</label>
                         
                         <form class="mt-4" method="POST" action="<?php echo base_url('login') ?>">
                             <?php if(isset($error)) { echo $error; }; ?>

@@ -53,7 +53,7 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<label for="kode_alternatif">Kode Alternatif </label>
-												<select class="form-control" name="kode_alternatif">
+												<select class="form-control" name="kode_alternatif" required>
 													<option value="" selected disabled hidden>Pilih Alternatif</option>
 													<?php 
 													foreach($data_alternatif as $row)
@@ -75,7 +75,7 @@
 											echo '<div class="col-md-4">
 																<div class="form-group">
 																	<label for="nilai">Nilai Parameter '.$row->kode_kriteria.' </label>
-																	<select class="form-control" name="nilai[]">
+																	<select class="form-control" name="nilai[]" required>
 																		<option value="" selected disabled hidden>Pilih salah satu</option>';
 														
 														// while($x < COUNT($data_param))

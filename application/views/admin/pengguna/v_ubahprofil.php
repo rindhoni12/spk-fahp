@@ -75,7 +75,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="mt-3" for="username"><strong>Username</strong></label>
-                          <input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" value="<?php echo $this->session->userdata("user_name"); ?>">
+                          <input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" value="<?php echo $this->session->userdata("user_name"); ?>" readonly>
                           <div class="invalid-feedback"><?php echo form_error('username') ?></div>
                         </div>
                       </div>
