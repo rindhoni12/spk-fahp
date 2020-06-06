@@ -105,32 +105,15 @@
                         </p>
                         <p>Langkah penyelesaian Fuzzy AHP adalah sebagai berikut :</p>
                         <p> a. Membuat struktur hierarki masalah yang
-                            akandiselesaikan dan menentukan perbandingan
+                            akan diselesaikan dan menentukan perbandingan
                             matriks berpasangan antar kriteria dengan skala
                             TFN (Tringular Fuzzy Number).
                         </p>
-                        <p> b. Menentukan nilai sistesis fuzzy (Si) prioritas
-                            dengan rumus:
-                            = x
-                            1
-                            Σ Σ M
-                        </p>
-                        <p> c. Menentukan nilai vektor (V) dan nilai Ordinat
-                            Defuzzifikasi (d’).
-                            Untuk k = 1,2,...n;k ≠ i, maka diperoleh nilai
-                            bobot vektor:
-                            W’ = (d’(A1), d’(A2),...,d’(An))T
-                        </p>
-                        <p>d. Normalisasi nilai bobot vektor fuzzy (W)
-                            Nilai bobot vektor yang ternormalisasi adalah
-                            seperti rumus berikut:
-                            W = (d(A1), d(A2), ..., d(An))T
-                            Dimana W adalah bilangan non fuzzy.
-                            Perumusan normalisasinya adalah:
-                            ( ) =
-                            ′
-                            Σ ′( )
-                        </p>
+                        <p> b. Menentukan nilai Fuzzy Syntethic Extend (Si)</p>
+                        <p> c. Menentukan nilai Vektor dari Fuzzy Syntethic Extent (V)</p>
+                        <p> d. Menentukan nilai Ordinat Defuzzifikasi dari Vektor (d’)</p>
+                        <p> e. Diperoleh Bobot Vektor (W’)</p>
+                        <p> f. Menormalisasi Bobot Vektor (W)</p>
                         <p>
                         Referensi : <br>
                         Faisol, Ahmad, M. Aziz Muslim & Hadi Suyono, 2014, "Komparasi Fuzzy AHP dengan AHP pada Sistem Pendukung
@@ -149,7 +132,7 @@
                         <p> Pengguna diharuskan mengisikan data kriteria terlebih dahulu, dalam pengisian kode kriteria diharapkan diurutkan berdasarkan kode kriteria sebelumnya. Dan jika paramter yang dimiliki kriteria lebih dari satu silahkan tekan tombol Tambah Form untuk menambahkan form. </p>
                         <p> Untuk lebih jelasnya, lihat video berikut ini : <br>
                             <video width="320" height="180" controls preload="none">
-                                <source src="movie.mp4" type="video/mp4">
+                                <source src="<?php echo base_url('assets/videos/kriteria.mp4') ?>" type="video/mp4">
                             </video>
                         </p>
 
@@ -157,7 +140,7 @@
                         <p> Setelah pengguna mengisi data kriteria, maka dilanjutkan dengan mengisi data alternatif. Dalam pengisian kode alterntaif diharapkan diurutkan berdasarkan kode alternatif sebelumnya.</p>
                         <p> Untuk lebih jelasnya, lihat video berikut ini : <br>
                             <video width="320" height="180" controls preload="none">
-                                <source src="movie.mp4" type="video/mp4">
+                                <source src="<?php echo base_url('assets/videos/alternatif.mp4') ?>" type="video/mp4">
                             </video>
                         </p>
 
@@ -165,7 +148,7 @@
                         <p> Setelah pengguna mengisi data kriteria dan data alternatif, baru pengguna dapat mengisi data nilai. Pengguna akan disuguhkan data kriteria dan data alternatif yang sudah diisikan pengguna sebelumnya. Dan isikan data nilai dengan data yang disuguhkan di dropdown.</p>
                         <p> Untuk lebih jelasnya, lihat video berikut ini : <br>
                             <video width="320" height="180" controls preload="none">
-                                <source src="movie.mp4" type="video/mp4">
+                                <source src="<?php echo base_url('assets/videos/nilai.mp4') ?>" type="video/mp4">
                             </video>
                         </p>
                         
@@ -173,7 +156,7 @@
                         <p> Setelah pengguna mengisikan data kriteria, data alternatif, dan data nilai, pengguna dapat melihat Perhitungan setiap langkah untuk mencari Bobot setiap kriteria di bagian Menu Perhitungan.</p>
                         <p> Untuk lebih jelasnya, lihat video berikut ini : <br>
                             <video width="320" height="180" controls preload="none">
-                                <source src="movie.mp4" type="video/mp4">
+                                <source src="<?php echo base_url('assets/videos/perhitungan.mp4') ?>" type="video/mp4">
                             </video>
                         </p>
                         
@@ -181,9 +164,14 @@
                         <p> Setelah pengguna mengisikan data kriteria, data alternatif, dan data nilai, pengguna dapat melihat ranking alternatif terbaik di bagian Menu Perankingan.</p>
                         <p> Untuk lebih jelasnya, lihat video berikut ini : <br>
                             <video width="320" height="180" controls preload="none">
-                                <source src="movie.mp4" type="video/mp4">
+                                <source src="<?php echo base_url('assets/videos/perankingan.mp4') ?>" type="video/mp4">
                             </video>
                         </p>
+
+                        <p> Catatan : </p>
+                        <p> Dalam penulisan kode kriteria, alternatif, maupun nilai, dimohon menuliskan secara urut tidak melompati suatu nilai. Sebagai contoh :</p>
+                        <p>Penulisan salah : K1, K2, K4, K5 (Karena melompati kode K3)</p>
+                        <p>Penulisan benar : K1, K2, K3, K4, K5 (Karena penulisan kode urut tanpa ada yang terlompati)</p>
                     </div>
                 </div>
             </div>
