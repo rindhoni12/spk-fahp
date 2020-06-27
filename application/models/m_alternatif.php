@@ -14,6 +14,23 @@ class m_alternatif extends CI_Model
         return [
             ['field' => 'kode_alternatif',
             'label' => 'Kode Alternatif',
+            'rules' => 'required|is_unique[tbl_alternatif.kode_alternatif]'],
+
+            ['field' => 'nama_alternatif',
+            'label' => 'Nama Alternatif',
+            'rules' => 'required'],
+
+            ['field' => 'kec_alternatif',
+            'label' => 'Kecamatan Alternatif',
+            'rules' => 'required'],
+        ];
+    }
+
+    public function rulesupdate()
+    {
+        return [
+            ['field' => 'kode_alternatif',
+            'label' => 'Kode Alternatif',
             'rules' => 'required'],
 
             ['field' => 'nama_alternatif',

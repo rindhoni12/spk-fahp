@@ -42,8 +42,8 @@
 											<div class="col-md-4">
 												<div class="form-group">
 													<label for="kode_kriteria">Kode Kriteria </label>
-													<input class="form-control <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
-														type="text" name="kode_kriteria" placeholder="Masukkan kode kriteria">
+													<input class="form-control text-capitalize <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
+														type="text" name="kode_kriteria" placeholder="Masukkan kode kriteria" autofocus autocomplete="off">
 													<div class="invalid-feedback">
 														<?php echo form_error('kode_kriteria') ?>
 													</div>
@@ -53,7 +53,7 @@
 												<div class="form-group">
 													<label for="nama_kriteria">Nama Kriteria </label>
 													<input class="form-control <?php echo form_error('nama_kriteria') ? 'is-invalid':'' ?>"
-														type="text" name="nama_kriteria" placeholder="Masukkan nama kriteria">
+														type="text" name="nama_kriteria" placeholder="Masukkan nama kriteria" autocomplete="off">
 													<div class="invalid-feedback">
 														<?php echo form_error('nama_kriteria') ?>
 													</div>
@@ -65,7 +65,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_l">Nilai Lower (l) </label>
 													<input class="form-control <?php echo form_error('nilai_l') ? 'is-invalid':'' ?>"
-														type="number" step="any" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower">
+														type="number" step="any" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower" autocomplete="off">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_l') ?>
 													</div>
@@ -75,7 +75,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_m">Nilai Middle (m) </label>
 													<input class="form-control <?php echo form_error('nilai_m') ? 'is-invalid':'' ?>"
-														type="number" step="any" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle">
+														type="number" step="any" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle" autocomplete="off">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_m') ?>
 													</div>
@@ -85,7 +85,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_u">Nilai Upper (u) </label>
 													<input class="form-control <?php echo form_error('nilai_u') ? 'is-invalid':'' ?>"
-														type="number" step="any" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper">
+														type="number" step="any" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper" autocomplete="off">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_u') ?>
 													</div>
@@ -106,7 +106,7 @@
 												<div class="form-group" id='groupnilai'>
 													<div id="divnilai1">
 														<label class="mt-4" for="nilai_param">Nilai Parameter 1 : </label>
-														<input type='number' step="any" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id='input1'/>
+														<input type='number' step="any" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" autocomplete="off" id='input1'/>
 														<div class="invalid-feedback">
 														<?php echo form_error('nilai_param') ?>
 														</div>
@@ -117,7 +117,7 @@
 												<div class="form-group" id='groupnama'>
 													<div id="div1">
 														<label class="mt-4" for="param_kriteria">Nama Parameter 1 : </label>
-														<input type='text' class="form-control <?php echo form_error('param_kriteria') ? 'is-invalid':'' ?>" name="param_kriteria[]" placeholder="Masukkan nama parameter kriteria" id='input1'/>
+														<input type='text' class="form-control <?php echo form_error('param_kriteria') ? 'is-invalid':'' ?>" name="param_kriteria[]" placeholder="Masukkan nama parameter kriteria" autocomplete="off" id='input1'/>
 														<div class="invalid-feedback">
 														<?php echo form_error('param_kriteria') ?>
 														</div>
@@ -157,7 +157,7 @@
           .attr("id", 'divnilai' + i);
         div.before()
 					.html(
-						'<label class="mt-4" for="nilai_param">Nilai Parameter ' + i + ' : </label>' + '<input type="number" step="any" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id="input' + i + '" />' + '<div class="invalid-feedback">' + '<?php echo form_error('nilai_param') ?>' + '</div>'
+						'<label class="mt-4" for="nilai_param">Nilai Parameter ' + i + ' : </label>' + '<input type="number" step="any" class="form-control <?php echo form_error('nilai_param') ? 'is-invalid':'' ?>" name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" autocomplete="off" id="input' + i + '" />' + '<div class="invalid-feedback">' + '<?php echo form_error('nilai_param') ?>' + '</div>'
 					);
 				div.prependTo("#groupnilai");
 
@@ -165,7 +165,7 @@
           .attr("id", 'div' + i);
         div.before()  
 					.html(
-						'<label class="mt-4" for="param_kriteria">Nama Parameter ' + i + ' : </label>' + '<input type="text" class="form-control <?php echo form_error('param_kriteria') ? 'is-invalid':'' ?>" name="param_kriteria[]" placeholder="Masukkan nama parameter kriteria" id="input' + i + '" />' + '<div class="invalid-feedback">' + '<?php echo form_error('param_kriteria') ?>' + '</div>'
+						'<label class="mt-4" for="param_kriteria">Nama Parameter ' + i + ' : </label>' + '<input type="text" class="form-control <?php echo form_error('param_kriteria') ? 'is-invalid':'' ?>" name="param_kriteria[]" placeholder="Masukkan nama parameter kriteria" autocomplete="off" id="input' + i + '" />' + '<div class="invalid-feedback">' + '<?php echo form_error('param_kriteria') ?>' + '</div>'
 					);						
         div.prependTo("#groupnama");
         i++;

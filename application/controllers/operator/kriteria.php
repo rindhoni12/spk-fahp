@@ -64,7 +64,7 @@ class Kriteria extends CI_Controller
 
         $kriteria = $this->m_kriteria;
         $validation = $this->form_validation;
-        $validation->set_rules($kriteria->rules());
+        $validation->set_rules($kriteria->rulesupdate());
 
         if ($validation->run()) {
             $kriteria->update();

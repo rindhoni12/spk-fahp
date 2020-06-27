@@ -43,7 +43,7 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="nama_user">Nama Pengguna </label>
-												<input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" value="<?php echo $pengguna->nama_user ?>">
+												<input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" autofocus autocomplete="off" value="<?php echo $pengguna->nama_user ?>">
 												<div class="invalid-feedback"><?php echo form_error('nama_user') ?></div>
 											</div>
 										</div>
@@ -61,7 +61,7 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="mt-3" for="username">Username </label>
-												<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" value="<?php echo $pengguna->username ?>" readonly>
+												<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username"  autocomplete="off" value="<?php echo $pengguna->username ?>" readonly>
 												<div class="invalid-feedback"><?php echo form_error('username') ?></div>
 											</div>
 										</div>

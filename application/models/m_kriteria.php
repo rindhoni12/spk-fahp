@@ -17,7 +17,7 @@ class m_kriteria extends CI_Model
         return [
             ['field' => 'kode_kriteria',
             'label' => 'Kode Kriteria',
-            'rules' => 'required'],
+            'rules' => 'required|is_unique[tbl_kriteria.kode_kriteria]'],
 
             ['field' => 'nama_kriteria',
             'label' => 'Nama Kriteria',
@@ -42,6 +42,31 @@ class m_kriteria extends CI_Model
             // ['field' => 'param_kriteria',
             // 'label' => 'Nama Parameter',
             // 'rules' => 'required']
+        ];
+    }
+
+    public function rulesupdate()
+    {
+        return [
+            ['field' => 'kode_kriteria',
+            'label' => 'Kode Kriteria',
+            'rules' => 'required'],
+
+            ['field' => 'nama_kriteria',
+            'label' => 'Nama Kriteria',
+            'rules' => 'required'],
+
+            ['field' => 'nilai_l',
+            'label' => 'Nilai Lower (l)',
+            'rules' => 'required'],
+
+            ['field' => 'nilai_m',
+            'label' => 'Nilai Middle (m)',
+            'rules' => 'required'],
+
+            ['field' => 'nilai_u',
+            'label' => 'Nilai Upper (u)',
+            'rules' => 'required'],
         ];
     }
 

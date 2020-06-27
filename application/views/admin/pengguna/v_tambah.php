@@ -35,7 +35,7 @@
 											<div class="col-md-6">
 												<div class="form-group">
 													<label for="nama_user">Nama Pengguna </label>
-													<input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna">
+													<input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" autofocus autocomplete="off">
 													<div class="invalid-feedback"><?php echo form_error('nama_user') ?></div>
 												</div>
 											</div>
@@ -54,14 +54,14 @@
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="mt-3" for="username">Username </label>
-													<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username">
+													<input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" autocomplete="off">
 													<div class="invalid-feedback"><?php echo form_error('username') ?></div>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="mt-3" for="password">Password </label>
-													<input class="form-control <?php echo form_error('password') ? 'is-invalid':'' ?>" type="password"	name="password" placeholder="Masukkan password">
+													<input class="form-control <?php echo form_error('password') ? 'is-invalid':'' ?>" type="password"	name="password" placeholder="Masukkan password" autocomplete="off">
 													<div class="invalid-feedback"><?php echo form_error('password') ?></div>
 												</div>
 											</div>

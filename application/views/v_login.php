@@ -30,7 +30,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="text-dark" for="username">Username</label>
-                                        <input class="form-control" name="username" id="username" type="text" placeholder="Masukkan username Anda" autofocus><?php echo form_error('username'); ?>
+                                        <input class="form-control" name="username" id="username" type="text" placeholder="Masukkan username Anda" autofocus autocomplete="off"><?php echo form_error('username'); ?>
                                     </div>
                                 </div>
 

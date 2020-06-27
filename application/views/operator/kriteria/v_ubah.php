@@ -36,8 +36,8 @@
 											<div class="col-md-4">
 												<div class="form-group">
 													<label for="kode_kriteria">Kode Kriteria </label>
-													<input class="form-control <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
-														type="text" name="kode_kriteria" placeholder="Masukkan kode kriteria" value="<?php echo $kriteria->kode_kriteria ?>">
+													<input class="form-control text-capitalize <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
+														type="text" name="kode_kriteria" placeholder="Masukkan kode kriteria" autofocus autocomplete="off" value="<?php echo $kriteria->kode_kriteria ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('kode_kriteria') ?>
 													</div>
@@ -47,7 +47,7 @@
 												<div class="form-group">
 													<label for="nama_kriteria">Nama Kriteria </label>
 													<input class="form-control <?php echo form_error('nama_kriteria') ? 'is-invalid':'' ?>"
-														type="text" name="nama_kriteria" placeholder="Masukkan nama kriteria" value="<?php echo $kriteria->nama_kriteria ?>">
+														type="text" name="nama_kriteria" placeholder="Masukkan nama kriteria" autocomplete="off" value="<?php echo $kriteria->nama_kriteria ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nama_kriteria') ?>
 													</div>
@@ -59,7 +59,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_l">Nilai Lower (l) </label>
 													<input class="form-control <?php echo form_error('nilai_l') ? 'is-invalid':'' ?>"
-														type="number" step="any" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower" value="<?php echo $kriteria->nilai_l ?>">
+														type="number" step="any" name="nilai_l" placeholder="Masukkan bobot fuzzy nilai lower" autocomplete="off" value="<?php echo $kriteria->nilai_l ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_l') ?>
 													</div>
@@ -69,7 +69,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_m">Nilai Middle (m) </label>
 													<input class="form-control <?php echo form_error('nilai_m') ? 'is-invalid':'' ?>"
-														type="number" step="any" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle" value="<?php echo $kriteria->nilai_m ?>">
+														type="number" step="any" name="nilai_m" placeholder="Masukkan bobot fuzzy nilai middle" autocomplete="off" value="<?php echo $kriteria->nilai_m ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_m') ?>
 													</div>
@@ -79,7 +79,7 @@
 												<div class="form-group">
 													<label class="mt-3" for="nilai_u">Nilai Upper (u) </label>
 													<input class="form-control <?php echo form_error('nilai_u') ? 'is-invalid':'' ?>"
-														type="number" step="any" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper" value="<?php echo $kriteria->nilai_u ?>">
+														type="number" step="any" name="nilai_u" placeholder="Masukkan bobot fuzzy nilai upper" autocomplete="off" value="<?php echo $kriteria->nilai_u ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('nilai_u') ?>
 													</div>
@@ -119,7 +119,7 @@
 																		<div class="form-group" id="groupnilai">
 																			<div id="divnilai'.($mm).'">
 																				<label class="mt-4" for="nilai_param">Nilai Parameter '.($mm).' : </label>
-																				<input type="number" step="any" class="form-control " name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" id="input'.($mm).'" value="'.$arr_par[$kz][$y].'"/>
+																				<input type="number" step="any" class="form-control " name="nilai_param[]" placeholder="Masukkan nilai parameter kriteria" autocomplete="off" id="input'.($mm).'" value="'.$arr_par[$kz][$y].'"/>
 																			</div>
 																		</div>
 																	</div>
@@ -127,7 +127,7 @@
 																		<div class="form-group" id="groupnama">
 																			<div id="div'.($mm).'">
 																				<label class="mt-4" for="param_kriteria">Nama Parameter '.($mm).' : </label>
-																				<input type="text" class="form-control " name="param_kriteria[]" placeholder="Masukkan nama parameter kriteria" id="input'.($mm).'" value="'.$par_kri[$kz][$y].'"/>
+																				<input type="text" class="form-control " name="param_kriteria[]" placeholder="Masukkan nama parameter kriteria" autocomplete="off" id="input'.($mm).'" value="'.$par_kri[$kz][$y].'"/>
 																			</div>
 																		</div>
 																	</div>';

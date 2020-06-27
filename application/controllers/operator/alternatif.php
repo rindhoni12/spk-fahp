@@ -50,7 +50,7 @@ class Alternatif extends CI_Controller
         
         $alternatif = $this->m_alternatif;
         $validation = $this->form_validation;
-        $validation->set_rules($alternatif->rules());
+        $validation->set_rules($alternatif->rulesupdate());
 
         if ($validation->run()) {
             $alternatif->update();

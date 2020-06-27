@@ -68,14 +68,14 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="mt-3" for="nama_user"><strong>Nama Pengguna</strong></label>
-                          <input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" value="<?php echo $this->session->userdata("user_nama"); ?>">
+                          <input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" autofocus autocomplete="off" value="<?php echo $this->session->userdata("user_nama"); ?>">
                           <div class="invalid-feedback"><?php echo form_error('nama_user') ?></div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="mt-3" for="username"><strong>Username</strong></label>
-                          <input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" value="<?php echo $this->session->userdata("user_name"); ?>" readonly>
+                          <input class="form-control <?php echo form_error('username') ? 'is-invalid':'' ?>"	type="text" name="username" placeholder="Masukkan username" autocomplete="off" value="<?php echo $this->session->userdata("user_name"); ?>" readonly>
                           <div class="invalid-feedback"><?php echo form_error('username') ?></div>
                         </div>
                       </div>
