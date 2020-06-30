@@ -7,7 +7,7 @@
 
 	<!-- SEO Meta Tags -->
 	<meta name="description"
-		content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
+		content="Sistem Pendukung Keputusan Penentuan Lokasi Embung dengan Menggunakan Metode Fuzzy Analytical Hierarchy Process (FAHP).">
 	<meta name="author" content="Inovatik">
 
 	<!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
@@ -100,14 +100,19 @@
 					</div>
 				</li>
 				<!-- end of dropdown menu -->
-				<span class="nav-item social-icons">
+
+				<li class="nav-item">
+					<a class="btn-custom-login" href="<?php echo base_url('login'); ?>">Login</a>
+				</li>
+
+				<!-- <span class="nav-item social-icons">
 					<span class="fa-stack">
 						<a href="<?php echo base_url('login'); ?>">
 							<i class="fas fa-circle fa-stack-2x lock"></i>
 							<i class="fas fa-lock fa-stack-1x"></i>
 						</a>
 					</span>
-				</span>
+				</span> -->
 			</ul>
 		</div>
 	</nav>
@@ -456,15 +461,15 @@
 						<ul class="list-unstyled li-space-lg">
 							<li class="media">
 								<i class="fas fa-square"></i>
-								<div class="media-body">Email : <a class="turquoise" href="">rindhoni12@gmail.com</a></div>
+								<div class="media-body">Email : <a class="turquoise" href="#">rindhoni12@gmail.com</a></div>
 							</li>
 							<li class="media">
 								<i class="fas fa-square"></i>
-								<div class="media-body">Whatsapp : <a class="turquoise" href="#your-link">+62 895415067674</a></div>
+								<div class="media-body">Whatsapp : <a class="turquoise" href="#">+62 895415067674</a></div>
 							</li>
 							<li class="media">
 								<i class="fas fa-square"></i>
-								<div class="media-body">Line id : <a class="turquoise" href="#your-link">rindhoniahmad</a></div>
+								<div class="media-body">Line id : <a class="turquoise" href="#">rindhoniahmad</a></div>
 							</li>
 						</ul>
 					</div>

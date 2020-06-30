@@ -24,8 +24,9 @@
 					</div>
 					<div class="col-5 align-self-center">
 						<div class="customize-input float-right">
-							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Informasi
+							<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample"
+								aria-expanded="false" aria-controls="collapseExample">
+								<i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i> Informasi
 							</button>
 						</div>
 					</div>
@@ -42,12 +43,13 @@
 							<div class="card card-body">
 								Dalam membuat perankingan terbaik, mula-mula mencari bobot dari setiap Alternatif yang ada.
 								<br>
-								Bobot tersebut didapat dari mengalikan setiap bobot parameter tiap kriteria dengan bobot kriterianya, setelah itu dijumlahkan.
+								Bobot tersebut didapat dari mengalikan setiap bobot parameter tiap kriteria dengan bobot kriterianya,
+								setelah itu dijumlahkan.
 								<br><br>
 								Untuk lebih jelasnya perhitungan menggunakan rumus berikut ini :
 								<br>
 								<br>
-								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.png') ?> ?>" width="351"/>
+								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.png') ?>" alt="nilai_akhir" width="351" />
 							</div>
 						</div>
 					</div>
@@ -97,7 +99,7 @@
 													$m++;
 												}
 												?>
-											
+
 											</tr>
 											<?php endforeach; ?>
 										</tbody>
@@ -146,24 +148,26 @@
 	<?php $this->load->view("admin/_partials/v_modal.php") ?>
 	<?php $this->load->view("admin/_partials/v_js.php") ?>
 	<script>
-		$(document).ready(function() {
-			$('#example').DataTable( {
-					"ordering": false,
-					"paging":   false,
-					"searching": false,
-					"info":     false
-			} );
-		} );
+		$(document).ready(function () {
+			$('#example').DataTable({
+				"ordering": false,
+				"paging": false,
+				"searching": false,
+				"info": false
+			});
+		});
+
 	</script>
 	<script>
-		$(document).ready(function() {
-			$('#example2').DataTable( {
-					"ordering": false,
-					"paging":   false,
-					"searching": false,
-					"info":     false
-			} );
-		} );
+		$(document).ready(function () {
+			$('#example2').DataTable({
+				"ordering": false,
+				"paging": false,
+				"searching": false,
+				"info": false
+			});
+		});
+
 	</script>
 
 </body>
