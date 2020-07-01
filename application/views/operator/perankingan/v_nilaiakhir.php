@@ -49,8 +49,8 @@
 								Untuk lebih jelasnya perhitungan menggunakan rumus berikut ini :
 								<br>
 								<br>
-								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.png'); ?>" alt="nilai_akhir" width="351" />
-							</div>
+								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.jpg'); ?>" alt="nilai_akhir" style="object-fit: cover; max-width: 270px;"/>
+								</div>
 						</div>
 					</div>
 					<div class="col-8">

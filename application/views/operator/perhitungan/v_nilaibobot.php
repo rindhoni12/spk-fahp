@@ -103,7 +103,7 @@
 										2. Tahap Kedua adalah menghitung perbandingan tingkat kemungkinan antar Fuzzy Syntethic Extent (Si).
 										<br> Langkahnya adalah memperbandingkan nilai setiap Fuzzy Syntethic Extent V(𝑆2 ≥ 𝑆1), menggunakan rumus berikut :
 										<br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.png'); ?>" alt="rumus_v" />
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.jpg'); ?>" alt="rumus_v" style="object-fit: cover; max-width: 270px;"/>
 									</div>
 								</div>
 							</div> <!-- batas tahap 2 -->
@@ -120,7 +120,7 @@
 									<div class="card-body">
 										3. Tahap Ketiga adalah setelah didapat nilai perbandingan dari setiap Fuzzy Syntethic Extent V(𝑆2 ≥ 𝑆1), lalu diambil nilai minimumnya, menggunakan rumus berikut :
 										<br><br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_d.png'); ?>" alt="rumus_d" />
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_d.jpg'); ?>" alt="rumus_d" style="object-fit: cover; max-width: 270px;"/>
 									</div>
 								</div>
 							</div> <!-- batas tahap 3 -->
@@ -137,7 +137,7 @@
 									<div class="card-body">
 										4. Tahap Keempat adalah setelah didapat nilai minimum dari perbandingan setiap Fuzzy Syntethic Extent (d'), nilai tersebut diurutkan dan menjadi nilai bobot (W'). Pengurutan nilainya seperti pada rumus berikut ini :
 										<br><br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_aksen.png'); ?>" alt="rumus_w_aksen" />
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_aksen.jpg'); ?>" alt="rumus_w_aksen" style="object-fit: cover; max-width: 270px;"/>
 									</div>
 								</div>
 							</div> <!-- batas tahap 4 -->
@@ -154,7 +154,7 @@
 									<div class="card-body">
 										5. Tahap Keempat adalah setelah didapat nilai nilai bobot (W'), nilai tersebut dinormalisasi untuk menghasilkan nilai bobot ternormalisasi (W) menggunakan rumus berikut :
 										<br><br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_ternormalisasi.png'); ?>" alt="rumus_w_ternormalisasi" />
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_ternormalisasi.jpg'); ?>" alt="rumus_w_ternormalisasi" style="object-fit: cover; max-width: 270px;" />
 									</div>
 								</div>
 							</div> <!-- batas tahap 5 -->
