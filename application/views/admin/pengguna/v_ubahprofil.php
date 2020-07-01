@@ -40,7 +40,7 @@
           </div>
         <?php endif; ?>
 				<div class="row">
-					<div class="col-8">
+					<div class="col-12">
 						<div class="card">
 
 							<div class="card-header text-white bg-light">
@@ -58,7 +58,7 @@
                       <div class="col-md-12 text-center">
                         <label for="nama_user"><strong>Foto Pengguna</strong></label>
                         <br>
-                        <img src="<?php echo base_url('upload/pengguna/'.$this->session->userdata("foto")) ?>" alt="user" class="rounded-circle" height="250" width="250" style="object-fit: cover; object-position: center;">
+                        <img src="<?php echo base_url('upload/pengguna/'.$this->session->userdata("foto")) ?>" alt="user" class="rounded-circle" style="object-fit: cover; object-position: center; max-width: 250px; height: 250px;">
                         <br>
                         <br>
                         <label for="nama_user" class="text-capitalize"><strong>Role : </strong><?php echo $this->session->userdata("role"); ?></label>

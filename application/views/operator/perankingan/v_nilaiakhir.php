@@ -49,7 +49,7 @@
 								Untuk lebih jelasnya perhitungan menggunakan rumus berikut ini :
 								<br>
 								<br>
-								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.png') ?>" alt="nilai_akhir" width="351" />
+								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.png'); ?>" alt="nilai_akhir" width="351" />
 							</div>
 						</div>
 					</div>
