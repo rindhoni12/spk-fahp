@@ -66,12 +66,12 @@
                                 <a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Tentang </a>
                             </div>
                             <div class="card-body text-center">
-                                <h3 class="card-title">Selamat Datang di Sistem Pendukung Keputusan dengan Metode Fuzzy AHP</h3>
+                                <h3 class="card-title">Selamat Datang di Sistem Pendukung Keputusan dengan Metode FAHP</h3>
                                 <br>
                                 <h5>Sistem Pendukung Keputusan (SPK) adalah aplikasi yang membantu pemangku keputusan dalam menemukan keputusan terbaik dari pilihan alternatif yang ada. 
-                                Dan pada Sistem Pendukung Keputusan (SPK) ini digunakan untuk menentukan Embung terbaik dari Alternatif Embung yang ada di Semarang menggunakan Metode Fuzzy Analytical Hierarchial Process (FAHP).</h5>
+                                Pada Sistem Pendukung Keputusan (SPK) ini digunakan untuk menentukan Embung terbaik dari Alternatif Embung yang ada di Kabupaten Semarang menggunakan Metode Fuzzy Analytic Hierarchy Process (FAHP).</h5>
                                 <br>
-                                <h5>Untuk lebih jelas tentang Sistem Pendukung Keputusan ini, berikut terdapat beberapa informasi yang bisa untuk dibaca.</h5>
+                                <h5>Untuk lebih jelas tentang Sistem Pendukung Keputusan ini, berikut terdapat beberapa informasi yang dapat dibaca.</h5>
                                 <br>
                                 <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseMetode" aria-expanded="false" aria-controls="collapseMetode">
                                     <i data-feather="info" class="feather-icon" style="margin-bottom: 2px"></i>	Metode
@@ -89,19 +89,18 @@
                         <a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Metode</a>
                     </div>
                     <div class="card card-body">
-                        <h4>Fuzzy Analytical Hierarchy Process (FAHP)</h4>
+                        <h4>Fuzzy Analytic Hierarchy Process (FAHP)</h4>
                         <p style="width: 90%;">
-                        Metode Fuzzy Analytical Hierarchy Process (FAHP) pertama kali diusulkan oleh seorang peneliti bernama
+                        Metode Fuzzy Analytic Hierarchy Process (FAHP) pertama kali diusulkan oleh seorang peneliti bernama
                         Chang
-                        dan merupakan perpanjangan langsung dari metode Analytical Hierarchy Process (AHP) yang diciptakan oleh
+                        dan merupakan perpanjangan langsung dari metode Analytic Hierarchy Process (AHP) yang diciptakan oleh
                         Saaty
                         yang terdiri dari
                         unsur-unsur matriks yang diwakili oleh bilangan fuzzy.
                         </p>
                         <p style="width: 90%;">
                         Metode FAHP menggunakan rasio fuzzy yang disebut Triangular Fuzzy Number (TFN) dan digunakan dalam proses
-                        fuzzifikasi. TFN terdiri dari tiga fungsi keanggotaan, yaitu nilai terendah (l), nilai tengah (m), dan
-                        nilai tertinggi (u).
+                        fuzzifikasi. TFN terdiri dari tiga fungsi keanggotaan, yaitu nilai lower (l), nilai middle (m), dan nilai upper (u).
                         </p>
                         <p>Langkah penyelesaian Fuzzy AHP adalah sebagai berikut :</p>
                         <p> a. Membuat struktur hierarki masalah yang
@@ -109,11 +108,11 @@
                             matriks berpasangan antar kriteria dengan skala
                             TFN (Tringular Fuzzy Number).
                         </p>
-                        <p> b. Menentukan nilai Fuzzy Syntethic Extend (Si)</p>
-                        <p> c. Menentukan nilai Vektor dari Fuzzy Syntethic Extent (V)</p>
-                        <p> d. Menentukan nilai Ordinat Defuzzifikasi dari Vektor (d’)</p>
-                        <p> e. Diperoleh Bobot Vektor (W’)</p>
-                        <p> f. Menormalisasi Bobot Vektor (W)</p>
+                        <p> b. Menentukan Nilai Fuzzy Synthetic Extent (Si)</p>
+                        <p> c. Menghitung Nilai Vektor Derajat Kemungkinan (V)</p>
+                        <p> d. Identifikasi Nilai Ordinat (d')</p>
+                        <p> e. Transformasi Nilai Ordinat menjadi Vektor Bobot (W’)</p>
+                        <p> f. Menormalisasi Nilai Vektor Bobot (W’) menjadi Vektor Bobot Ternormalisasi (W)</p>
                         <p>
                         Referensi : <br>
                         Faisol, Ahmad, M. Aziz Muslim & Hadi Suyono, 2014, "Komparasi Fuzzy AHP dengan AHP pada Sistem Pendukung

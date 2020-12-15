@@ -126,7 +126,7 @@
 					<div class="col-lg-6">
 						<div class="text-container">
 							<h1><span class="turquoise">Sistem Pendukung Keputusan</h1>
-							<h5>Metode Fuzzy Analytical Hierarchial Process</h5>
+							<h5>Metode Fuzzy Analytic Hierarchy Process</h5>
 							<h4 class="p-large">Dirancang untuk Menentukan Embung Terbaik di Kabupaten Semarang</h4>
 							<a class="btn-solid-lg page-scroll" href="#metode">DISCOVER</a>
 						</div> <!-- end of text-container -->
@@ -149,19 +149,19 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="text-container">
-						<h2>Fuzzy Analytical Hierarchy Process (FAHP)</h2>
-						<p>Metode Fuzzy Analytical Hierarchy Process (FAHP) pertama kali diusulkan oleh seorang peneliti
+						<h2>Fuzzy Analytic Hierarchy Process (FAHP)</h2>
+						<p>Metode Fuzzy Analytic Hierarchy Process (FAHP) pertama kali diusulkan oleh seorang peneliti
 							bernama Chang dan
-							merupakan perpanjangan langsung dari metode Analytical Hierarchy Process (AHP) yang
+							merupakan perpanjangan langsung dari metode Analytic Hierarchy Process (AHP) yang
 							diciptakan
 							oleh Saaty yang terdiri
 							dari unsur-unsur matriks yang diwakili oleh bilangan fuzzy.
 							<br><br>
 							Metode FAHP menggunakan rasio fuzzy yang disebut Triangular Fuzzy Number (TFN) dan digunakan
 							dalam proses fuzzifikasi.
-							TFN terdiri dari tiga fungsi keanggotaan, yaitu nilai terendah (l), nilai tengah (m), dan
+							TFN terdiri dari tiga fungsi keanggotaan, yaitu nilai lower (l), nilai middle (m), dan
 							nilai
-							tertinggi (u).
+							upper (u).
 							<br><br>
 							Referensi :
 							<br>
@@ -198,25 +198,23 @@
 						<ul class="list-unstyled li-space-lg">
 							<li class="media">
 								<i class="fas fa-check"></i>
-								<div class="media-body">Pengisian nilai Fuzzy Syntethic Extend (Si)</div>
+								<div class="media-body">Menentukan Nilai Fuzzy Synthetic Extent (Si)</div>
 							</li>
 							<li class="media">
 								<i class="fas fa-check"></i>
-								<div class="media-body">Mencari nilai Perbandingan Fuzzy Syntethic Extent (V)</div>
+								<div class="media-body">Menghitung Nilai Vektor Derajat Kemungkinan (V)</div>
 							</li>
 							<li class="media">
 								<i class="fas fa-check"></i>
-								<div class="media-body">Mencari Nilai Minimum Perbandingan Fuzzy Syntethic Extent (d')
-								</div>
+								<div class="media-body">Identifikasi Nilai Ordinat (d')</div>
 							</li>
 							<li class="media">
 								<i class="fas fa-check"></i>
-								<div class="media-body">Didapatkan Nilai Vektor Bobot (W')</div>
+								<div class="media-body">Transformasi Nilai Ordinat menjadi Vektor Bobot (W’)</div>
 							</li>
 							<li class="media">
 								<i class="fas fa-check"></i>
-								<div class="media-body">Menormalisasi Nilai Vektor Bobot menjadi Vektor Bobot
-									Ternormalisasi (W)</div>
+								<div class="media-body">Menormalisasi Nilai Vektor Bobot (W’) menjadi Vektor Bobot Ternormalisasi (W)</div>
 							</li>
 						</ul>
 					</div> <!-- end of text-container -->
@@ -297,7 +295,7 @@
 				<div class="col-lg-12">
 					<div class="col-lg-12 align-content-center">
 						<div class="box">
-							<iframe src="https://muhammadrefi11.carto.com/builder/34d16669-7763-4a4d-b67d-fffa07af4ac7/embed"
+							<iframe src="https://arindhoni.carto.com/builder/50e20ff7-1903-4ab4-904b-714d60984acd/embed"
 								allowfullscreen="" width="100%" height="600" frameborder="0">
 							</iframe>
 						</div>
@@ -452,7 +450,7 @@
 							Kabupaten
 							Semarang.</p>
 						<p>SPK berikut memiliki fitur CRUD (Create, Read, Update, & Delete) dan pengolahan data
-							yang menggunakan metode Fuzzy Analytical Hierarchial Process (FAHP).</p>
+							yang menggunakan metode Fuzzy Analytic Hierarchy Process (FAHP).</p>
 					</div>
 				</div> <!-- end of col -->
 				<div class="col-md-4">

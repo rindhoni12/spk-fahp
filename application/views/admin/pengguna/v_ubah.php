@@ -43,7 +43,7 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="nama_user">Nama Pengguna </label>
-												<input class="form-control text-capitalize <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" autofocus autocomplete="off" value="<?php echo $pengguna->nama_user ?>">
+												<input class="form-control <?php echo form_error('nama_user') ? 'is-invalid':'' ?>"	type="text" name="nama_user" placeholder="Masukkan nama pengguna" autofocus autocomplete="off" value="<?php echo $pengguna->nama_user ?>">
 												<div class="invalid-feedback"><?php echo form_error('nama_user') ?></div>
 											</div>
 										</div>

@@ -74,17 +74,17 @@
 							<div class="card card-body">
 								Data Kriteria ditampilan pada tabel berikut.
 								<br>
-								<br> Khusus data Bobot Parameter dan Nama Parameter ditampilkan di dalam tabel berupa array. 
+								<br> Khusus data Nilai Parameter dan Nama Parameter ditampilkan di dalam tabel berupa array. 
 								<br> Sebagai contoh seperti berikut :
-								<br> - Bobot Parameter : 5,4,3,2,1
+								<br> - Nilai Parameter : 5,4,3,2,1
 								<br> - Nama Parameter : Hutan,Semak belukar,Ladang/tegalan,Sawah tadah hujan,Perkampungan
 								<br>
-								<br> Artinya Bobot dan Nama Parameternya sebagai berikut : 
-								<br> - Bobot 5 = Hujan
-								<br> - Bobot 4 = Semak belukar
-								<br> - Bobot 3 = Ladang/tegalan
-								<br> - Bobot 2 = Sawah tadah hujan
-								<br> - Bobot 1 = Perkampungan
+								<br> Artinya Nilai dan Nama Parameternya sebagai berikut : 
+								<br> - Nilai 5 = Hujan
+								<br> - Nilai 4 = Semak belukar
+								<br> - Nilai 3 = Ladang/tegalan
+								<br> - Nilai 2 = Sawah tadah hujan
+								<br> - Nilai 1 = Perkampungan
 							</div>
 						</div>
 						<div class="card">
@@ -117,7 +117,7 @@
 												<th >Lower (l)</th>
 												<th>Middle (m)</th>
 												<th>Upper (u)</th>
-												<th>Bobot Parameter</th>
+												<th>Nilai Parameter</th>
 												<th>Nama Parameter</th>
 												<?php 
 													if ($this->session->userdata('role') == 'operator')

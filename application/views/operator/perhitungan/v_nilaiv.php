@@ -17,7 +17,7 @@
 			<div class="page-breadcrumb">
 				<div class="row">
 					<div class="col-7 align-self-center">
-						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Daftar Data Perbandingan Fuzzy Syntethic Extent (V)
+						<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Daftar Data Nilai Vektor Derajat Kemungkinan (V)
 						</h4>
 						<!-- ini v_breadcrumb -->
 						<?php $this->load->view("admin/_partials/v_breadcrumb.php") ?>
@@ -51,7 +51,7 @@
 										<tbody class="text-center">
 											<?php
 											$v="V";
-											$si = "S";
+											$si = "M";
 											foreach ($hasil_v as $data_v): ?>
 											<tr>
 												<td>
@@ -111,7 +111,7 @@
 										2. Tahap Kedua adalah menghitung perbandingan tingkat kemungkinan antar Fuzzy Syntethic Extent (Si).
 										<br> Langkahnya adalah memperbandingkan nilai setiap Fuzzy Syntethic Extent V(𝑆2 ≥ 𝑆1), menggunakan rumus berikut :
 										<br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.jpg'); ?>" alt="rumus_v" style="object-fit: cover; max-width: 270px;"/>
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.jpg'); ?>" alt="rumus_v" style="object-fit: cover; max-width: 360px;"/>
 									</div>
 								</div>
 							</div> <!-- batas tahap 2 -->

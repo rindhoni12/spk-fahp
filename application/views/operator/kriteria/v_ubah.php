@@ -36,7 +36,7 @@
 											<div class="col-md-4">
 												<div class="form-group">
 													<label for="kode_kriteria">Kode Kriteria </label>
-													<input class="form-control text-capitalize <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
+													<input class="form-control <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
 														type="text" name="kode_kriteria" placeholder="Masukkan kode kriteria" autofocus autocomplete="off" value="<?php echo $kriteria->kode_kriteria ?>">
 													<div class="invalid-feedback">
 														<?php echo form_error('kode_kriteria') ?>

@@ -80,7 +80,7 @@
 							</div>
 							<div class="card-body">
                 <iframe
-                  src="https://muhammadrefi11.carto.com/builder/34d16669-7763-4a4d-b67d-fffa07af4ac7/embed" allowfullscreen="" width="100%" height="600" frameborder="0">
+                  src="https://arindhoni.carto.com/builder/50e20ff7-1903-4ab4-904b-714d60984acd/embed" allowfullscreen="" width="100%" height="600" frameborder="0">
                 </iframe>
 							</div>
 						</div>
@@ -97,7 +97,6 @@
 		<div class="modal-content">
 			<div class="modal-header">
 					<h4 class="modal-title" id="myCenterModalLabel">Akan Dialihkan...</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			</div>
 			<div class="modal-body text-center">
 				<h3>Mengubah Peta yang digunakan, dapat dilakukan langsung dari Carto</h3>

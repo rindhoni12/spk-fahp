@@ -43,13 +43,13 @@
 							<div class="card card-body">
 								Dalam membuat perankingan terbaik, mula-mula mencari bobot dari setiap Alternatif yang ada.
 								<br>
-								Bobot tersebut didapat dari mengalikan setiap bobot parameter tiap kriteria dengan bobot kriterianya,
+								Bobot tersebut didapat dari mengalikan setiap nilai parameter tiap kriteria dengan bobot tiap kriteria,
 								setelah itu dijumlahkan.
-								<br><br>
+								<!-- <br><br>
 								Untuk lebih jelasnya perhitungan menggunakan rumus berikut ini :
 								<br>
 								<br>
-								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.jpg'); ?>" alt="nilai_akhir" style="object-fit: cover; max-width: 270px;"/>
+								<img src="<?php echo base_url('assets/images/perhitungan/nilai_akhir.jpg'); ?>" alt="nilai_akhir" style="object-fit: cover; max-width: 270px;"/> -->
 								</div>
 						</div>
 					</div>
@@ -76,7 +76,7 @@
 												$x = 1;
 												while($x <= COUNT($arr_nilai[0]))
 												{
-													echo '<th>Bobot K'.$x.'</th>';
+													echo '<th>Nilai K'.$x.'</th>';
 													$x++;
 												} 
 												?>

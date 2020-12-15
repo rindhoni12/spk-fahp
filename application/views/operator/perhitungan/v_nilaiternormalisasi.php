@@ -154,7 +154,7 @@
 									<div class="card-body">
 										5. Tahap Keempat adalah setelah didapat nilai nilai bobot (W'), nilai tersebut dinormalisasi untuk menghasilkan nilai bobot ternormalisasi (W) menggunakan rumus berikut :
 										<br><br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_ternormalisasi.jpg'); ?>" alt="rumus_w_ternormalisasi" style="object-fit: cover; max-width: 270px;" />
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_w_ternormalisasi.jpg'); ?>" alt="rumus_w_ternormalisasi" style="object-fit: cover; max-width: 360px;" />
 									</div>
 								</div>
 							</div> <!-- batas tahap 5 -->

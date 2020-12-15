@@ -86,7 +86,7 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<label for="kode_alternatif">Kode Alternatif </label>
-												<input class="form-control text-capitalize <?php echo form_error('kode_alternatif') ? 'is-invalid':'' ?>" type="text"  name="kode_alternatif" placeholder="Masukkan kode alternatif" autofocus autocomplete="off"/>
+												<input class="form-control <?php echo form_error('kode_alternatif') ? 'is-invalid':'' ?>" type="text"  name="kode_alternatif" placeholder="Masukkan kode alternatif" autofocus autocomplete="off"/>
 												<div class="invalid-feedback">
 													<?php echo form_error('kode_alternatif') ?>
 												</div>
@@ -95,7 +95,7 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<label for="nama_alternatif">Nama Alternatif </label>
-												<input class="form-control text-capitalize <?php echo form_error('nama_alternatif') ? 'is-invalid':'' ?>" type="text"  name="nama_alternatif" placeholder="Masukkan nama alternatif" autocomplete="off"/>
+												<input class="form-control <?php echo form_error('nama_alternatif') ? 'is-invalid':'' ?>" type="text"  name="nama_alternatif" placeholder="Masukkan nama alternatif" autocomplete="off"/>
 												<div class="invalid-feedback">
 													<?php echo form_error('nama_alternatif') ?>
 												</div>
@@ -104,7 +104,7 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<label for="kec_alternatif">Kecamatan Alternatif </label>
-												<input class="form-control text-capitalize <?php echo form_error('kec_alternatif') ? 'is-invalid':'' ?>" type="text"  name="kec_alternatif" placeholder="Masukkan kecamatan alternatif" autocomplete="off"/>
+												<input class="form-control <?php echo form_error('kec_alternatif') ? 'is-invalid':'' ?>" type="text"  name="kec_alternatif" placeholder="Masukkan kecamatan alternatif" autocomplete="off"/>
 												<div class="invalid-feedback">
 													<?php echo form_error('kec_alternatif') ?>
 												</div>

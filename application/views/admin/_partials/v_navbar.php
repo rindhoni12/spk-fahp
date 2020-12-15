@@ -29,7 +29,7 @@
 
                     <img src="<?php echo base_url('upload/pengguna/'.$this->session->userdata("foto")) ?>" alt="user" class="rounded-circle" height="40" width="40" style="object-fit: cover; object-position: center;">
                     
-                    <span class="ml-2 d-none d-lg-inline-block text-dark"><?php echo $this->session->userdata("user_nama"); ?></span> 
+                    <span class="ml-2 d-none d-lg-inline-block text-dark text-capitalize"><?php echo $this->session->userdata("user_nama"); ?></span> 
                     <i data-feather="chevron-down" class="svg-icon"></i>
                     </span>
                 </a>

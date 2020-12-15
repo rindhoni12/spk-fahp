@@ -103,7 +103,7 @@
 										2. Tahap Kedua adalah menghitung perbandingan tingkat kemungkinan antar Fuzzy Syntethic Extent (Si).
 										<br> Langkahnya adalah memperbandingkan nilai setiap Fuzzy Syntethic Extent V(𝑆2 ≥ 𝑆1), menggunakan rumus berikut :
 										<br>
-										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.jpg'); ?>" alt="rumus_v" style="object-fit: cover; max-width: 270px;"/>
+										<img src="<?php echo base_url('assets/images/perhitungan/rumus_v.jpg'); ?>" alt="rumus_v" style="object-fit: cover; max-width: 360px;"/>
 									</div>
 								</div>
 							</div> <!-- batas tahap 2 -->

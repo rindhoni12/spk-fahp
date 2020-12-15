@@ -107,7 +107,7 @@
 												$x = 1;
 												while($x <= COUNT($arr_nilai[0]))
 												{
-													echo '<th>Bobot K'.$x.'</th>';
+													echo '<th>Nilai K'.$x.'</th>';
 													$x++;
 												} 
 												?>

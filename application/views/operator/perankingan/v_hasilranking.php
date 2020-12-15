@@ -46,7 +46,7 @@
 								<a class="text-info"><i class="fas fa-info-circle"></i>&nbsp Informasi</a>
 							</div>
 							<div class="card card-body">
-								Hasil akhir perankingan terbaik ditampilkan pada tabel dibawah ini.
+								Hasil perankingan terbaik ditampilkan pada tabel berikut.
 							</div>
 						</div>
 						<div class="card">
@@ -86,7 +86,7 @@
                       <tr>
 												<th>Kode Alternatif</th>
 												<th>Nama Alternatif</th>
-                        <th>Bobot Akhir</th>
+                        <th>Bobot Akhir Alternatif</th>
 											</tr>
 										</thead>
 										<tbody class="text-center">

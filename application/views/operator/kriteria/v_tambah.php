@@ -42,7 +42,7 @@
 											<div class="col-md-4">
 												<div class="form-group">
 													<label for="kode_kriteria">Kode Kriteria </label>
-													<input class="form-control text-capitalize <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
+													<input class="form-control <?php echo form_error('kode_kriteria') ? 'is-invalid':'' ?>"
 														type="text" name="kode_kriteria" placeholder="Masukkan kode kriteria" autofocus autocomplete="off">
 													<div class="invalid-feedback">
 														<?php echo form_error('kode_kriteria') ?>
@@ -96,8 +96,8 @@
 											<div class="col-md-4">
 												<label class="mt-3" for="param_kriteria">Parameter Kriteria </label>
 													<div class="btn-list">
-														<button type="button" class="btn waves-effect waves-light btn-success btn-sm" id="tambah">Tambah Form</button>
-														<button type="button" class="btn waves-effect waves-light btn-danger btn-sm" id="hapus">Kurangi Form</button>
+														<button type="button" class="btn waves-effect waves-light btn-success btn-sm" id="tambah">Tambah Parameter</button>
+														<button type="button" class="btn waves-effect waves-light btn-danger btn-sm" id="hapus">Kurangi Parameter</button>
 													</div>
 											</div>
 										</div>
